@@ -48,7 +48,9 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.45 }}
             className="mt-6 max-w-2xl"
           >
-            <p className="text-lg md:text-xl font-heading italic leading-relaxed font-semibold bg-gradient-to-r from-accent via-yellow-300 to-accent bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(234,179,8,0.3)]">
+            <p className="text-lg md:text-xl font-heading italic leading-relaxed font-semibold bg-[length:200%_100%] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(234,179,8,0.3)] animate-shimmer"
+              style={{ backgroundImage: 'linear-gradient(90deg, hsl(var(--accent)), #fde68a, hsl(var(--accent)), #fde68a, hsl(var(--accent)))' }}
+            >
               <motion.span
                 animate={{ opacity: [0.4, 1, 0.4], scale: [0.9, 1.1, 0.9] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
