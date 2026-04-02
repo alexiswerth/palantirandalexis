@@ -35,14 +35,38 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          <motion.h1
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight font-heading text-primary"
+            className="relative"
           >
-            Alexis Werth
-          </motion.h1>
+            {/* Floating sparkles around name */}
+            {sparkles.map((s, i) => (
+              <motion.span
+                key={i}
+                className="absolute text-sm pointer-events-none select-none"
+                style={{ left: '50%', top: '50%' }}
+                animate={{
+                  x: [s.x, s.x + 8, s.x - 5, s.x],
+                  y: [s.y, s.y - 12, s.y + 6, s.y],
+                  opacity: [0, 0.8, 0.4, 0],
+                  scale: [0.5, 1, 0.7, 0.5],
+                }}
+                transition={{
+                  duration: s.duration,
+                  repeat: Infinity,
+                  delay: s.delay,
+                  ease: "easeInOut",
+                }}
+              >
+                {s.emoji}
+              </motion.span>
+            ))}
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-heading text-primary">
+              Alexis Werth
+            </h1>
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
