@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import headshot from "@/assets/alexis-headshot.jpg";
-import { Mail, Phone, MapPin, Scale, Download } from "lucide-react";
+import { Mail, Phone, MapPin, Scale, Download, Globe } from "lucide-react";
 
 const HeroSection = () => {
   return (
