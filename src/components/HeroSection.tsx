@@ -19,7 +19,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-8"
           >
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-accent/20 shadow-xl">
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-muted/30 shadow-2xl shadow-black/30">
               <img src={headshot} alt="Alexis Werth" className="w-full h-full object-cover" />
             </div>
           </motion.div>
