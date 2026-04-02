@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 40 33% 96%;
-    --foreground: 213 50% 15%;
+    --background: 210 30% 97%;
+    --foreground: 215 60% 14%;
 
-    --card: 40 30% 98%;
-    --card-foreground: 213 50% 15%;
+    --card: 210 25% 99%;
+    --card-foreground: 215 60% 14%;
 
-    --popover: 40 30% 98%;
-    --popover-foreground: 213 50% 15%;
+    --popover: 210 25% 99%;
+    --popover-foreground: 215 60% 14%;
 
-    --primary: 213 50% 15%;
-    --primary-foreground: 40 33% 96%;
+    --primary: 215 60% 14%;
+    --primary-foreground: 210 30% 97%;
 
-    --secondary: 40 25% 92%;
-    --secondary-foreground: 213 50% 15%;
+    --secondary: 210 25% 93%;
+    --secondary-foreground: 215 60% 14%;
 
-    --muted: 40 20% 90%;
-    --muted-foreground: 213 20% 45%;
+    --muted: 210 20% 91%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 12 80% 58%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 85% 50%;
+    --accent-foreground: 215 60% 14%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 12 80% 58%;
+    --border: 210 20% 89%;
+    --input: 210 20% 89%;
+    --ring: 45 85% 50%;
 
     --radius: 0.75rem;
 
@@ -48,12 +48,12 @@
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', system-ui, sans-serif;
 
-    --highlight: 12 80% 58%;
-    --highlight-soft: 12 60% 92%;
-    --navy: 213 50% 15%;
-    --navy-light: 213 30% 30%;
-    --cream: 40 33% 96%;
-    --cream-dark: 40 25% 90%;
+    --highlight: 45 85% 50%;
+    --highlight-soft: 45 60% 92%;
+    --navy: 215 60% 14%;
+    --navy-light: 215 40% 30%;
+    --cream: 210 30% 97%;
+    --cream-dark: 210 25% 91%;
   }
 
   .dark {
