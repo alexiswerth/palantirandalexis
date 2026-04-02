@@ -1,0 +1,129 @@
+import { motion } from "framer-motion";
+import { CheckCircle2, Brain, Shield, FileText, Users, Zap, Globe } from "lucide-react";
+
+const fitItems = [
+  {
+    icon: Brain,
+    jobReq: "Advise Research teams on permissible data usage & data sourcing strategy",
+    myFit: "Designed and implemented Drata's privacy program end-to-end, including AI compliance. Primary point of contact for all privacy requests partnering with Product to embed legal considerations at development level.",
+    tags: ["AI Compliance", "Privacy", "Data Governance"],
+  },
+  {
+    icon: Shield,
+    jobReq: "Counsel on data localization, cross-border transfers & privacy implications",
+    myFit: "Deep expertise in privacy program design — built intake systems, configured DataGrail workflows, managed cookie, pixel, and AI compliance across jurisdictions.",
+    tags: ["Privacy Programs", "Cross-border", "Compliance"],
+  },
+  {
+    icon: Globe,
+    jobReq: "Monitor regulatory developments & adapt internal policies proactively",
+    myFit: "Known for translating complex regulatory requirements into practical guidance for technical teams and operationalizing AI to modernize legal operations.",
+    tags: ["Regulatory Strategy", "Legal Ops"],
+  },
+  {
+    icon: Users,
+    jobReq: "Bridge between technical and legal functions",
+    myFit: "Serves as a bridge between legal and technical functions at Drata, translating complex regulatory requirements into practical, scalable guidance for Product, GRC, GTM, Marketing, Finance, and People teams.",
+    tags: ["Cross-functional", "Technical Fluency"],
+  },
+  {
+    icon: Zap,
+    jobReq: "Creative, practical problem solver in fast-moving startup environment",
+    myFit: "Drata Legal's resident AI architect — identifying, stress-testing, and deploying AI tools across the legal function. Reduced sales request processing time by 30% at Snappy through workflow automation.",
+    tags: ["Innovation", "AI Tools", "Efficiency"],
+  },
+  {
+    icon: FileText,
+    jobReq: "8+ years of relevant legal experience with in-house experience preferred",
+    myFit: "8+ years spanning in-house roles at Drata, Snappy, Mimecast, and Prometric, plus fractional counsel work. JD from CUNY, BS from Cornell ILR. NY & NJ bar admissions.",
+    tags: ["8+ Years", "In-house", "JD"],
+  },
+];
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+const WhyAnthropicSection = () => {
+  return (
+    <section id="why-anthropic" className="py-24 bg-secondary/50">
+      <div className="container max-w-5xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="section-heading">Why I'm Your Frontier Counsel</h2>
+          <div className="accent-line mx-auto mt-4" />
+          <p className="mt-6 text-muted-foreground font-body max-w-2xl mx-auto">
+            A direct mapping of Anthropic's requirements to my experience — 
+            every qualification, addressed.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid gap-6"
+        >
+          {fitItems.map((fi, i) => (
+            <motion.div key={i} variants={item} className="experience-card">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="p-2 rounded-lg bg-accent/10 text-accent shrink-0">
+                      <fi.icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wider text-accent font-body mb-1">
+                        What Anthropic Needs
+                      </p>
+                      <p className="text-sm font-medium text-primary font-body leading-relaxed">
+                        {fi.jobReq}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 rounded-lg bg-primary/5 text-primary shrink-0">
+                      <CheckCircle2 className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wider text-primary/60 font-body mb-1">
+                        What I Bring
+                      </p>
+                      <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                        {fi.myFit}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-3">
+                        {fi.tags.map((tag) => (
+                          <span key={tag} className="fit-badge">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default WhyAnthropicSection;
