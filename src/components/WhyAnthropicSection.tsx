@@ -7,13 +7,6 @@ const fitItems = [
     jobReq: "Advise on AI data usage, privacy, and cross-border compliance",
     myFit: "Designed Drata's privacy program end-to-end — AI compliance, DataGrail workflows, cookie/pixel governance. Primary point of contact for all privacy requests, partnering with Product to embed legal at the development level.",
     tags: ["AI Compliance", "Privacy", "Data Governance"],
-  },
-  {
-    icon: Users,
-    jobReq: "Bridge technical and legal functions in a fast-moving startup",
-    myFit: "Translates complex regulatory requirements into practical, scalable guidance for Product, GRC, GTM, and Engineering teams. Drata Legal's resident AI architect — deploying AI tools across the legal function. Reduced processing time 30% at Snappy via workflow automation.",
-    tags: ["Cross-functional", "AI Tools", "Legal Ops"],
-  },
   {
     icon: Shield,
     jobReq: "8+ years in-house with deep AI and technology law expertise",
