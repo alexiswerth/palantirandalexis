@@ -82,7 +82,7 @@ const HeroSection = () => {
             </span>
             <span className="hidden sm:inline text-border">|</span>
             <span className="flex items-center gap-1.5">
-              🌐 Region Lead, Counselwell (NYC)
+              <Globe className="w-4 h-4" /> Region Lead, Counselwell (NYC)
             </span>
           </motion.div>
 
