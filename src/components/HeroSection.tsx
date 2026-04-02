@@ -31,17 +31,29 @@ const HeroSection = () => {
             className="mb-8"
           >
             <div className="relative w-44 h-44 md:w-52 md:h-52">
-              {/* Golden glow */}
-              <div className="absolute inset-0 blur-2xl opacity-15 bg-accent rounded-full scale-110" />
-              {/* Leaf/petal shape */}
-              <div
-                className="relative w-full h-full overflow-hidden shadow-2xl shadow-black/30 border border-accent/25"
+              {/* Animated golden glow */}
+              <motion.div
+                className="absolute inset-0 blur-2xl bg-accent rounded-full scale-110"
+                animate={{ opacity: [0.1, 0.25, 0.1] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              />
+              {/* Leaf/petal shape with animated border */}
+              <motion.div
+                className="relative w-full h-full overflow-hidden shadow-2xl shadow-black/30"
                 style={{
                   borderRadius: '60% 40% 50% 50% / 50% 60% 40% 50%',
                 }}
+                animate={{
+                  boxShadow: [
+                    '0 0 0 1px hsla(var(--accent) / 0.2), 0 0 15px hsla(var(--accent) / 0.05)',
+                    '0 0 0 1px hsla(var(--accent) / 0.45), 0 0 25px hsla(var(--accent) / 0.15)',
+                    '0 0 0 1px hsla(var(--accent) / 0.2), 0 0 15px hsla(var(--accent) / 0.05)',
+                  ],
+                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
                 <img src={headshot} alt="Alexis Werth" className="w-full h-full object-cover" />
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 
