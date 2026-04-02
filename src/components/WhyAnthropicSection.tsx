@@ -11,7 +11,7 @@ const fitItems = [
   {
     icon: Shield,
     jobReq: "8+ years in-house with deep AI and technology law expertise",
-    myFit: "8+ years spanning in-house roles at Drata, Snappy, Mimecast, and Prometric. Handles majority of commercial deal flow — DPAs, MSAs, NDAs. JD from CUNY, BS from Cornell ILR. NY & NJ bar admissions.",
+    myFit: "8+ years spanning in-house roles at Drata, Snappy, Mimecast, and Prometric. Handles majority of commercial deal flow (DPAs, MSAs, NDAs). JD from CUNY, BS from Cornell ILR. NY & NJ bar admissions.",
     tags: ["8+ Years", "In-house", "Commercial"],
   },
 ];
