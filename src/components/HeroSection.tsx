@@ -35,31 +35,13 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight font-heading text-primary"
-          >
-            Alexis Werth
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="mt-2 text-sm font-body font-medium tracking-[0.25em] uppercase text-muted-foreground"
-          >
-            Esq.
-          </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.45 }}
-            className="mt-6 max-w-2xl relative"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
           >
-            {/* Floating sparkles */}
+            {/* Floating sparkles around name */}
             {sparkles.map((s, i) => (
               <motion.span
                 key={i}
@@ -81,6 +63,26 @@ const HeroSection = () => {
                 {s.emoji}
               </motion.span>
             ))}
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-heading text-primary">
+              Alexis Werth
+            </h1>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="mt-2 text-sm font-body font-medium tracking-[0.25em] uppercase text-muted-foreground"
+          >
+            Esq.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
+            className="mt-6 max-w-2xl"
+          >
             <p className="text-lg md:text-xl font-heading italic leading-relaxed font-semibold bg-[length:200%_100%] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(234,179,8,0.3)] animate-shimmer"
               style={{ backgroundImage: 'linear-gradient(90deg, hsl(var(--accent)), #fde68a, hsl(var(--accent)), #fde68a, hsl(var(--accent)))' }}
             >
