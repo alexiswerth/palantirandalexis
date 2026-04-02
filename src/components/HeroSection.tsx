@@ -2,6 +2,17 @@ import { motion } from "framer-motion";
 import headshot from "@/assets/alexis-headshot.jpg";
 import { Mail, Phone, MapPin, Scale, Download, Globe } from "lucide-react";
 
+const sparkles = [
+  { emoji: "✨", x: -120, y: -15, delay: 0, duration: 3 },
+  { emoji: "🌿", x: 130, y: -10, delay: 0.5, duration: 3.5 },
+  { emoji: "✨", x: -80, y: 20, delay: 1.2, duration: 2.8 },
+  { emoji: "🌸", x: 100, y: 15, delay: 0.8, duration: 3.2 },
+  { emoji: "✨", x: -150, y: 5, delay: 1.5, duration: 3 },
+  { emoji: "🍃", x: 160, y: -5, delay: 0.3, duration: 3.4 },
+  { emoji: "✨", x: -50, y: -20, delay: 2, duration: 2.6 },
+  { emoji: "✨", x: 60, y: 22, delay: 1.8, duration: 3.1 },
+];
+
 const HeroSection = () => {
   return (
     <section className="relative flex items-center justify-center overflow-hidden">
@@ -46,22 +57,34 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="mt-6 max-w-2xl"
+            className="mt-6 max-w-2xl relative"
           >
+            {/* Floating sparkles */}
+            {sparkles.map((s, i) => (
+              <motion.span
+                key={i}
+                className="absolute text-sm pointer-events-none select-none"
+                style={{ left: '50%', top: '50%' }}
+                animate={{
+                  x: [s.x, s.x + 8, s.x - 5, s.x],
+                  y: [s.y, s.y - 12, s.y + 6, s.y],
+                  opacity: [0, 0.8, 0.4, 0],
+                  scale: [0.5, 1, 0.7, 0.5],
+                }}
+                transition={{
+                  duration: s.duration,
+                  repeat: Infinity,
+                  delay: s.delay,
+                  ease: "easeInOut",
+                }}
+              >
+                {s.emoji}
+              </motion.span>
+            ))}
             <p className="text-lg md:text-xl font-heading italic leading-relaxed font-semibold bg-[length:200%_100%] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(234,179,8,0.3)] animate-shimmer"
               style={{ backgroundImage: 'linear-gradient(90deg, hsl(var(--accent)), #fde68a, hsl(var(--accent)), #fde68a, hsl(var(--accent)))' }}
             >
-              <motion.span
-                animate={{ opacity: [0.4, 1, 0.4], scale: [0.9, 1.1, 0.9] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="inline-block"
-              >✦</motion.span>
-              {" "}Your Next Frontier Counsel{" "}
-              <motion.span
-                animate={{ opacity: [0.4, 1, 0.4], scale: [0.9, 1.1, 0.9] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="inline-block"
-              >✦</motion.span>
+              ✦ Your Next Frontier Counsel ✦
             </p>
             <p className="mt-4 text-base text-muted-foreground leading-relaxed font-body">
               In-house counsel with 8+ years at the intersection of AI, privacy, and technology law.
