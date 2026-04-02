@@ -59,7 +59,7 @@ const WhyAnthropicSection = () => {
                   <div className="p-2.5 rounded-xl bg-primary/10 text-primary shrink-0">
                     <fi.icon className="w-5 h-5" />
                   </div>
-                  <p className="text-xs font-medium uppercase tracking-wider text-primary/70 font-body">
+                  <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground font-body">
                     What Anthropic Needs
                   </p>
                 </div>
