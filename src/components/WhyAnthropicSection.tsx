@@ -4,39 +4,21 @@ import { CheckCircle2, Brain, Shield, FileText, Users, Zap, Globe } from "lucide
 const fitItems = [
   {
     icon: Brain,
-    jobReq: "Advise Research teams on permissible data usage & data sourcing strategy",
-    myFit: "Designed and implemented Drata's privacy program end-to-end, including AI compliance. Primary point of contact for all privacy requests partnering with Product to embed legal considerations at development level.",
+    jobReq: "Advise on AI data usage, privacy, and cross-border compliance",
+    myFit: "Designed Drata's privacy program end-to-end — AI compliance, DataGrail workflows, cookie/pixel governance. Primary point of contact for all privacy requests, partnering with Product to embed legal at the development level.",
     tags: ["AI Compliance", "Privacy", "Data Governance"],
   },
   {
-    icon: Shield,
-    jobReq: "Counsel on data localization, cross-border transfers & privacy implications",
-    myFit: "Deep expertise in privacy program design — built intake systems, configured DataGrail workflows, managed cookie, pixel, and AI compliance across jurisdictions.",
-    tags: ["Privacy Programs", "Cross-border", "Compliance"],
-  },
-  {
-    icon: Globe,
-    jobReq: "Monitor regulatory developments & adapt internal policies proactively",
-    myFit: "Known for translating complex regulatory requirements into practical guidance for technical teams and operationalizing AI to modernize legal operations.",
-    tags: ["Regulatory Strategy", "Legal Ops"],
-  },
-  {
     icon: Users,
-    jobReq: "Bridge between technical and legal functions",
-    myFit: "Serves as a bridge between legal and technical functions at Drata, translating complex regulatory requirements into practical, scalable guidance for Product, GRC, GTM, Marketing, Finance, and People teams.",
-    tags: ["Cross-functional", "Technical Fluency"],
+    jobReq: "Bridge technical and legal functions in a fast-moving startup",
+    myFit: "Translates complex regulatory requirements into practical, scalable guidance for Product, GRC, GTM, and Engineering teams. Drata Legal's resident AI architect — deploying AI tools across the legal function. Reduced processing time 30% at Snappy via workflow automation.",
+    tags: ["Cross-functional", "AI Tools", "Legal Ops"],
   },
   {
-    icon: Zap,
-    jobReq: "Creative, practical problem solver in fast-moving startup environment",
-    myFit: "Drata Legal's resident AI architect — identifying, stress-testing, and deploying AI tools across the legal function. Reduced sales request processing time by 30% at Snappy through workflow automation.",
-    tags: ["Innovation", "AI Tools", "Efficiency"],
-  },
-  {
-    icon: FileText,
-    jobReq: "8+ years of relevant legal experience with in-house experience preferred",
-    myFit: "8+ years spanning in-house roles at Drata, Snappy, Mimecast, and Prometric, plus fractional counsel work. JD from CUNY, BS from Cornell ILR. NY & NJ bar admissions.",
-    tags: ["8+ Years", "In-house", "JD"],
+    icon: Shield,
+    jobReq: "8+ years in-house with deep AI and technology law expertise",
+    myFit: "8+ years spanning in-house roles at Drata, Snappy, Mimecast, and Prometric. Handles majority of commercial deal flow — DPAs, MSAs, NDAs. JD from CUNY, BS from Cornell ILR. NY & NJ bar admissions.",
+    tags: ["8+ Years", "In-house", "Commercial"],
   },
 ];
 
