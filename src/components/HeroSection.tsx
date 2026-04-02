@@ -48,9 +48,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.45 }}
             className="mt-6 max-w-2xl"
           >
-            <p className="text-lg md:text-xl font-heading italic text-navy-light leading-relaxed">
-              Your Next{" "}
-              <span className="text-accent font-semibold not-italic">Frontier Counsel</span>
+            <p className="text-lg md:text-xl font-heading italic leading-relaxed text-accent font-semibold bg-gradient-to-r from-accent via-yellow-300 to-accent bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(234,179,8,0.3)]">
+              Your Next Frontier Counsel ✦
             </p>
             <p className="mt-4 text-base text-muted-foreground leading-relaxed font-body">
               In-house counsel with 8+ years at the intersection of AI, privacy, and technology law.
