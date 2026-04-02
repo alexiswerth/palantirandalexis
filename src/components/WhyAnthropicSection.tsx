@@ -68,8 +68,8 @@ const WhyAnthropicSection = () => {
                 </p>
                 <div className="w-full h-px bg-border mb-5" />
                 <div className="flex items-center gap-2 mb-3">
-                  <CheckCircle2 className="w-4 h-4 text-primary/70" />
-                  <p className="text-xs font-medium uppercase tracking-wider text-primary/70 font-body">
+                  <CheckCircle2 className="w-4 h-4 text-muted-foreground" />
+                  <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground font-body">
                     What I Bring
                   </p>
                 </div>
