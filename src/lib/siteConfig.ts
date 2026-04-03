@@ -12,6 +12,7 @@ export interface ExperienceData {
 
 export interface FitItem {
   iconName: string;
+  label: string;
   jobReq: string;
   myFit: string;
   tags: string[];
