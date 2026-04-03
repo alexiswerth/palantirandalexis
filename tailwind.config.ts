@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Space Mono', 'Courier New', 'monospace'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {

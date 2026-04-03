@@ -98,7 +98,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.45 }}
             className="mt-6 max-w-2xl"
           >
-            <p className="text-lg md:text-xl font-heading italic leading-relaxed font-semibold bg-[length:200%_100%] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(234,179,8,0.3)] animate-shimmer"
+            <p className="text-lg md:text-xl font-heading leading-relaxed font-semibold bg-[length:200%_100%] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(234,179,8,0.3)] animate-shimmer"
               style={{ backgroundImage: 'linear-gradient(90deg, hsl(var(--accent)), #fde68a, hsl(var(--accent)), #fde68a, hsl(var(--accent)))' }}
             >
               ✦ {tagline} ✦
