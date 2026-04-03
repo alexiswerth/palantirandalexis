@@ -6,7 +6,7 @@ interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElemen
   loading?: "lazy" | "eager";
 }
 
-const ImageWithFallback = ({ src, fallbackSrc, alt, className, ...props }: ImageWithFallbackProps) => {
+const ImageWithFallback = ({ src, fallbackSrc, alt, className, loading = "lazy", ...props }: ImageWithFallbackProps) => {
   const [imgSrc, setImgSrc] = useState(src);
   const [hasError, setHasError] = useState(false);
 
