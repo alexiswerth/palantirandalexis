@@ -52,7 +52,7 @@ const ValuePropositionSection = () => {
                       What Your Team Needs
                     </p>
                   </div>
-                  <p className="text-base font-semibold text-accent font-heading leading-snug mb-5">
+                  <p className="text-base font-semibold text-accent font-body leading-snug mb-5">
                     {fi.jobReq}
                   </p>
                   <div className="w-full h-px bg-border mb-5" />
