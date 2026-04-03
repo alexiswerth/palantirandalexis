@@ -35,7 +35,7 @@ describe("HeroSection", () => {
 
   it("renders CTA buttons", () => {
     render(<HeroSection />);
-    expect(screen.getByText(/Why I'm Your Frontier Counsel/)).toBeInTheDocument();
+    expect(screen.getByText(/See What I Bring/)).toBeInTheDocument();
     expect(screen.getByText(/Download Resume/)).toBeInTheDocument();
   });
 
