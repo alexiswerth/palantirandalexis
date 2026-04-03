@@ -30,7 +30,7 @@ describe("HeroSection", () => {
     expect(screen.getByText("awerth13@gmail.com")).toBeInTheDocument();
     expect(screen.getByText("516.319.8772")).toBeInTheDocument();
     expect(screen.getByText("New York, NY")).toBeInTheDocument();
-    expect(screen.getByText(/New York.*NJ/i, { exact: false })).toBeTruthy();
+    expect(screen.getByText(/New York & New Jersey Bar/)).toBeInTheDocument();
   });
 
   it("renders CTA buttons", () => {
