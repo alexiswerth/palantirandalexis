@@ -44,29 +44,31 @@ const Index = () => {
         </Suspense>
       </ErrorBoundary>
 
-      <ErrorBoundary section="hero" inline>
-        <Suspense fallback={<SectionFallback />}>
-          <HeroSection />
-        </Suspense>
-      </ErrorBoundary>
+      <main>
+        <ErrorBoundary section="hero" inline>
+          <Suspense fallback={<SectionFallback />}>
+            <HeroSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary section="why-anthropic" inline>
-        <Suspense fallback={<SectionFallback />}>
-          <WhyAnthropicSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary section="why-anthropic" inline>
+          <Suspense fallback={<SectionFallback />}>
+            <WhyAnthropicSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary section="experience" inline>
-        <Suspense fallback={<SectionFallback />}>
-          <ExperienceSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary section="experience" inline>
+          <Suspense fallback={<SectionFallback />}>
+            <ExperienceSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary section="education" inline>
-        <Suspense fallback={<SectionFallback />}>
-          <EducationSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary section="education" inline>
+          <Suspense fallback={<SectionFallback />}>
+            <EducationSection />
+          </Suspense>
+        </ErrorBoundary>
+      </main>
 
       {/* Footer */}
       <footer className="py-12 text-center">
@@ -77,7 +79,7 @@ const Index = () => {
           className="container max-w-5xl mx-auto px-6"
         >
           <p className="text-sm text-muted-foreground font-body flex items-center justify-center gap-1.5">
-            Built with <Heart className="w-3.5 h-3.5 text-accent fill-accent" /> for Anthropic
+            Built with <Heart className="w-3.5 h-3.5 text-accent fill-accent" aria-hidden="true" /> for Anthropic
           </p>
         </motion.div>
       </footer>
