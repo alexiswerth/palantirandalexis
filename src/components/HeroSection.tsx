@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import headshot from "@/assets/alexis-headshot.jpg";
+import headshot from "@/assets/alexis-headshot.webp";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import siteConfig from "@/lib/siteConfig";
 import { Mail, Phone, MapPin, Scale, Download, Globe } from "lucide-react";
@@ -51,7 +51,7 @@ const HeroSection = () => {
                 }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
-                <ImageWithFallback src={headshot} alt={name} className="w-full h-full object-cover" />
+                <ImageWithFallback src={headshot} alt={name} className="w-full h-full object-cover" width={416} height={416} loading="eager" />
               </motion.div>
             </div>
           </motion.div>
