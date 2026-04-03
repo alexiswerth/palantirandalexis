@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect } from "react";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import LazyWhenVisible from "@/components/LazyWhenVisible";
 import { getScrollPosition, setScrollPosition } from "@/lib/persistence";
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
@@ -51,23 +52,29 @@ const Index = () => {
           </Suspense>
         </ErrorBoundary>
 
-        <ErrorBoundary section="why-anthropic" inline>
-          <Suspense fallback={<SectionFallback />}>
-            <WhyAnthropicSection />
-          </Suspense>
-        </ErrorBoundary>
+        <LazyWhenVisible fallback={<SectionFallback />} rootMargin="300px">
+          <ErrorBoundary section="why-anthropic" inline>
+            <Suspense fallback={<SectionFallback />}>
+              <WhyAnthropicSection />
+            </Suspense>
+          </ErrorBoundary>
+        </LazyWhenVisible>
 
-        <ErrorBoundary section="experience" inline>
-          <Suspense fallback={<SectionFallback />}>
-            <ExperienceSection />
-          </Suspense>
-        </ErrorBoundary>
+        <LazyWhenVisible fallback={<SectionFallback />} rootMargin="300px">
+          <ErrorBoundary section="experience" inline>
+            <Suspense fallback={<SectionFallback />}>
+              <ExperienceSection />
+            </Suspense>
+          </ErrorBoundary>
+        </LazyWhenVisible>
 
-        <ErrorBoundary section="education" inline>
-          <Suspense fallback={<SectionFallback />}>
-            <EducationSection />
-          </Suspense>
-        </ErrorBoundary>
+        <LazyWhenVisible fallback={<SectionFallback />} rootMargin="300px">
+          <ErrorBoundary section="education" inline>
+            <Suspense fallback={<SectionFallback />}>
+              <EducationSection />
+            </Suspense>
+          </ErrorBoundary>
+        </LazyWhenVisible>
       </main>
 
       {/* Footer */}
