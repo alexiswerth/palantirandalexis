@@ -1,22 +1,25 @@
 import { motion } from "framer-motion";
 import headshot from "@/assets/alexis-headshot.jpg";
+import ImageWithFallback from "@/components/ImageWithFallback";
+import siteConfig from "@/lib/siteConfig";
 import { Mail, Phone, MapPin, Scale, Download, Globe } from "lucide-react";
 
 const sparkles = [
-  { emoji: "✨", x: -120, y: -15, delay: 0, duration: 3 },
-  { emoji: "🌿", x: 130, y: -10, delay: 0.5, duration: 3.5 },
-  { emoji: "✨", x: -80, y: 20, delay: 1.2, duration: 2.8 },
-  { emoji: "🌸", x: 100, y: 15, delay: 0.8, duration: 3.2 },
-  { emoji: "✨", x: -150, y: 5, delay: 1.5, duration: 3 },
-  { emoji: "🍃", x: 160, y: -5, delay: 0.3, duration: 3.4 },
-  { emoji: "✨", x: -50, y: -20, delay: 2, duration: 2.6 },
-  { emoji: "✨", x: 60, y: 22, delay: 1.8, duration: 3.1 },
+  { emoji: "\u2728", x: -120, y: -15, delay: 0, duration: 3 },
+  { emoji: "\ud83c\udf3f", x: 130, y: -10, delay: 0.5, duration: 3.5 },
+  { emoji: "\u2728", x: -80, y: 20, delay: 1.2, duration: 2.8 },
+  { emoji: "\ud83c\udf38", x: 100, y: 15, delay: 0.8, duration: 3.2 },
+  { emoji: "\u2728", x: -150, y: 5, delay: 1.5, duration: 3 },
+  { emoji: "\ud83c\udf43", x: 160, y: -5, delay: 0.3, duration: 3.4 },
+  { emoji: "\u2728", x: -50, y: -20, delay: 2, duration: 2.6 },
+  { emoji: "\u2728", x: 60, y: 22, delay: 1.8, duration: 3.1 },
 ];
 
 const HeroSection = () => {
+  const { name, suffix, tagline, bio, email, phone, phoneDisplay, location, barAdmissions, community, resumePath, ctaLabel, ctaAnchor } = siteConfig;
+
   return (
     <section className="relative flex items-center justify-center overflow-hidden">
-      {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
         backgroundSize: '40px 40px'
@@ -31,18 +34,14 @@ const HeroSection = () => {
             className="mb-8"
           >
             <div className="relative w-44 h-44 md:w-52 md:h-52">
-              {/* Animated golden glow */}
               <motion.div
                 className="absolute inset-0 blur-2xl bg-accent rounded-full scale-110"
                 animate={{ opacity: [0.1, 0.25, 0.1] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               />
-              {/* Leaf/petal shape with animated border */}
               <motion.div
                 className="relative w-full h-full overflow-hidden shadow-2xl shadow-black/30"
-                style={{
-                  borderRadius: '60% 40% 50% 50% / 50% 60% 40% 50%',
-                }}
+                style={{ borderRadius: '60% 40% 50% 50% / 50% 60% 40% 50%' }}
                 animate={{
                   boxShadow: [
                     '0 0 0 1px hsla(var(--accent) / 0.2), 0 0 15px hsla(var(--accent) / 0.05)',
@@ -52,7 +51,7 @@ const HeroSection = () => {
                 }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
-                <img src={headshot} alt="Alexis Werth" className="w-full h-full object-cover" />
+                <ImageWithFallback src={headshot} alt={name} className="w-full h-full object-cover" />
               </motion.div>
             </div>
           </motion.div>
@@ -63,7 +62,6 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            {/* Floating sparkles around name */}
             {sparkles.map((s, i) => (
               <motion.span
                 key={i}
@@ -75,18 +73,13 @@ const HeroSection = () => {
                   opacity: [0, 0.8, 0.4, 0],
                   scale: [0.5, 1, 0.7, 0.5],
                 }}
-                transition={{
-                  duration: s.duration,
-                  repeat: Infinity,
-                  delay: s.delay,
-                  ease: "easeInOut",
-                }}
+                transition={{ duration: s.duration, repeat: Infinity, delay: s.delay, ease: "easeInOut" }}
               >
                 {s.emoji}
               </motion.span>
             ))}
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-heading text-primary">
-              Alexis Werth
+              {name}
             </h1>
           </motion.div>
 
@@ -96,7 +89,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.35 }}
             className="mt-2 text-sm font-body font-medium tracking-[0.25em] uppercase text-muted-foreground"
           >
-            Esq.
+            {suffix}
           </motion.p>
 
           <motion.div
@@ -108,12 +101,10 @@ const HeroSection = () => {
             <p className="text-lg md:text-xl font-heading italic leading-relaxed font-semibold bg-[length:200%_100%] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(234,179,8,0.3)] animate-shimmer"
               style={{ backgroundImage: 'linear-gradient(90deg, hsl(var(--accent)), #fde68a, hsl(var(--accent)), #fde68a, hsl(var(--accent)))' }}
             >
-              ✦ Your Next Frontier Counsel ✦
+              \u2726 {tagline} \u2726
             </p>
             <p className="mt-4 text-base text-muted-foreground leading-relaxed font-body">
-              In-house counsel with 8+ years at the intersection of AI, privacy, and technology law.
-              Deep expertise in privacy program design, AI compliance, complex commercial transactions,
-              and legal ops.
+              {bio}
             </p>
           </motion.div>
 
@@ -123,24 +114,24 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground font-body"
           >
-            <a href="mailto:awerth13@gmail.com" className="flex items-center gap-1.5 hover:text-accent transition-colors">
-              <Mail className="w-4 h-4" /> awerth13@gmail.com
+            <a href={`mailto:${email}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
+              <Mail className="w-4 h-4" /> {email}
             </a>
             <span className="hidden sm:inline text-border">|</span>
-            <a href="tel:5163198772" className="flex items-center gap-1.5 hover:text-accent transition-colors">
-              <Phone className="w-4 h-4" /> 516.319.8772
+            <a href={`tel:${phone}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
+              <Phone className="w-4 h-4" /> {phoneDisplay}
             </a>
             <span className="hidden sm:inline text-border">|</span>
             <span className="flex items-center gap-1.5">
-              <MapPin className="w-4 h-4" /> New York, NY
+              <MapPin className="w-4 h-4" /> {location}
             </span>
             <span className="hidden sm:inline text-border">|</span>
             <span className="flex items-center gap-1.5">
-              <Scale className="w-4 h-4" /> NY & NJ Bar
+              <Scale className="w-4 h-4" /> {barAdmissions.join(" & ")} Bar
             </span>
             <span className="hidden sm:inline text-border">|</span>
             <span className="flex items-center gap-1.5">
-              <Globe className="w-4 h-4" /> Counselwell | Region Lead (NYC)
+              <Globe className="w-4 h-4" /> {community}
             </span>
           </motion.div>
 
@@ -151,13 +142,13 @@ const HeroSection = () => {
             className="mt-12 flex flex-wrap items-center justify-center gap-4"
           >
             <a
-              href="#why-anthropic"
+              href={ctaAnchor}
               className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-accent text-accent-foreground font-body font-medium text-sm hover:opacity-90 transition-opacity shadow-lg shadow-accent/20 whitespace-nowrap"
             >
-              Why I'm Your Frontier Counsel ↓
+              {ctaLabel} \u2193
             </a>
             <a
-              href="/Alexis_Werth_Resume.pdf"
+              href={resumePath}
               download
               className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full border border-primary/20 text-primary font-body font-medium text-sm hover:bg-primary/5 transition-colors whitespace-nowrap"
             >
