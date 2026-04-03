@@ -55,7 +55,7 @@ const siteConfig: SiteConfig = {
   phoneDisplay: "516.319.8772",
   location: "New York, NY",
   barAdmissions: ["New York", "New Jersey"],
-  community: "Counselwell | Region Lead (NYC)",
+  community: "Counselwell Region Lead (NYC)",
   resumePath: "/Alexis_Werth_Resume.pdf",
   ctaLabel: "See What I Bring",
   ctaAnchor: "#value-proposition",
