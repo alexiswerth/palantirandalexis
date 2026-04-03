@@ -79,7 +79,7 @@ const Index = () => {
           className="container max-w-5xl mx-auto px-6"
         >
           <p className="text-sm text-muted-foreground font-body flex items-center justify-center gap-1.5">
-            Built with <Heart className="w-3.5 h-3.5 text-accent fill-accent" /> for Anthropic
+            Built with <Heart className="w-3.5 h-3.5 text-accent fill-accent" aria-hidden="true" /> for Anthropic
           </p>
         </motion.div>
       </footer>
