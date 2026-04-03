@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Space Mono', 'Courier New', 'monospace'],
+        heading: ['Source Code Pro', 'Courier New', 'monospace'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
