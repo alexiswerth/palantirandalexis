@@ -133,24 +133,28 @@ const siteConfig: SiteConfig = {
   fitItems: [
     {
       iconName: "Brain",
+      label: "AI & Privacy",
       jobReq: "Lead AI governance, privacy strategy, and cross-border data compliance",
       myFit: "Designed Drata's privacy program end-to-end: AI compliance, DataGrail workflows, cookie/pixel governance. Primary point of contact for all privacy requests, partnering with Product to embed legal at the development level.",
       tags: ["AI Governance", "Privacy Strategy", "Data Compliance"],
     },
     {
       iconName: "Shield",
+      label: "Legal Operations",
       jobReq: "Scale legal operations from growth stage through IPO readiness",
       myFit: "8+ years spanning in-house roles at Drata, Snappy, Mimecast, and Prometric. Handles majority of commercial deal flow (DPAs, MSAs, NDAs). Built AI-powered legal ops workflows that cut processing time by 30%.",
       tags: ["Legal Ops", "Commercial", "Scalability"],
     },
     {
       iconName: "Zap",
+      label: "Product & Innovation",
       jobReq: "Drive innovation at the intersection of product, engineering, and legal",
       myFit: "Resident AI architect for Legal: identifying, stress-testing, and deploying AI tools to reshape how legal work gets done. Partners with Product to embed legal review at the development level, not as an afterthought.",
       tags: ["Innovation Counsel", "Product Legal", "AI Tools"],
     },
     {
       iconName: "Globe",
+      label: "Regulatory & Compliance",
       jobReq: "Navigate complex regulatory landscapes across jurisdictions",
       myFit: "NY & NJ bar admissions. JD from CUNY, BS from Cornell ILR. Deep experience with DPAs, cross-border data transfers, and multi-jurisdictional compliance frameworks for SaaS platforms.",
       tags: ["Regulatory", "Cross-Border", "Multi-Jurisdiction"],
