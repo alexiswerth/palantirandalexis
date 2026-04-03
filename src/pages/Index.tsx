@@ -8,7 +8,7 @@ import { Heart } from "lucide-react";
 // Lazy-load heavy sections for better initial load
 const NavBar = lazy(() => import("@/components/NavBar"));
 const HeroSection = lazy(() => import("@/components/HeroSection"));
-const WhyAnthropicSection = lazy(() => import("@/components/WhyAnthropicSection"));
+const ValuePropositionSection = lazy(() => import("@/components/ValuePropositionSection"));
 const ExperienceSection = lazy(() => import("@/components/ExperienceSection"));
 const EducationSection = lazy(() => import("@/components/EducationSection"));
 const ParallaxElements = lazy(() => import("@/components/ParallaxElements"));
@@ -53,9 +53,9 @@ const Index = () => {
         </ErrorBoundary>
 
         <LazyWhenVisible fallback={<SectionFallback />} rootMargin="300px">
-          <ErrorBoundary section="why-anthropic" inline>
+          <ErrorBoundary section="value-proposition" inline>
             <Suspense fallback={<SectionFallback />}>
-              <WhyAnthropicSection />
+              <ValuePropositionSection />
             </Suspense>
           </ErrorBoundary>
         </LazyWhenVisible>
@@ -86,7 +86,7 @@ const Index = () => {
           className="container max-w-5xl mx-auto px-6"
         >
           <p className="text-sm text-muted-foreground font-body flex items-center justify-center gap-1.5">
-            Built with <Heart className="w-3.5 h-3.5 text-accent fill-accent" aria-hidden="true" /> for Anthropic
+            Built with <Heart className="w-3.5 h-3.5 text-accent fill-accent" aria-hidden="true" /> by Alexis Werth
           </p>
         </motion.div>
       </footer>
