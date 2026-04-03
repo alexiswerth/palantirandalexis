@@ -51,7 +51,7 @@ const HeroSection = () => {
                 }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
-                <ImageWithFallback src={headshot} alt={name} className="w-full h-full object-cover" width={416} height={416} />
+                <ImageWithFallback src={headshot} alt={name} className="w-full h-full object-cover" width={416} height={416} loading="eager" />
               </motion.div>
             </div>
           </motion.div>
