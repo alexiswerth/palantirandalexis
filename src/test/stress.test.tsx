@@ -15,7 +15,7 @@ vi.mock("framer-motion", () => ({
   useTransform: () => ({ get: () => 0 }),
 }));
 
-vi.mock("@/assets/alexis-headshot.jpg", () => ({ default: "mock.jpg" }));
+vi.mock("@/assets/alexis-headshot.webp", () => ({ default: "mock.webp" }));
 
 import Index from "@/pages/Index";
 

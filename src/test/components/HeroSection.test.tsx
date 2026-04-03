@@ -14,7 +14,7 @@ vi.mock("framer-motion", () => ({
   useTransform: () => ({ get: () => 0 }),
 }));
 
-vi.mock("@/assets/alexis-headshot.jpg", () => ({ default: "mock-headshot.jpg" }));
+vi.mock("@/assets/alexis-headshot.webp", () => ({ default: "mock-headshot.webp" }));
 
 import HeroSection from "@/components/HeroSection";
 
