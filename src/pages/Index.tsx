@@ -3,12 +3,14 @@ import HeroSection from "@/components/HeroSection";
 import WhyAnthropicSection from "@/components/WhyAnthropicSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
+import ParallaxElements from "@/components/ParallaxElements";
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <ParallaxElements />
       <NavBar />
       <HeroSection />
       <WhyAnthropicSection />
