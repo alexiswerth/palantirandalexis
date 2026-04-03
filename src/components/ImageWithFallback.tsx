@@ -33,7 +33,7 @@ const ImageWithFallback = ({ src, fallbackSrc, alt, className, loading = "lazy",
       alt={alt}
       className={className}
       onError={handleError}
-      loading="lazy"
+      loading={loading}
       {...props}
     />
   );
