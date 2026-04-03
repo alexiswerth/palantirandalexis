@@ -49,7 +49,7 @@ const ValuePropositionSection = () => {
                       <Icon className="w-5 h-5" />
                     </div>
                     <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground font-body">
-                      What Your Team Needs
+                      {fi.label}
                     </p>
                   </div>
                   <p className="text-base font-semibold text-accent font-body leading-snug mb-5">
