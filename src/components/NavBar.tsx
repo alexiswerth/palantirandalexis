@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { label: "Why Anthropic", href: "#why-anthropic" },
-  { label: "Experience", href: "#experience" },
-  { label: "Education", href: "#education" },
-];
+import siteConfig from "@/lib/siteConfig";
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,13 +31,13 @@ const NavBar = () => {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
+          {siteConfig.navLinks.map((l) => (
             <a key={l.href} href={l.href} className="nav-link">
               {l.label}
             </a>
           ))}
           <a
-            href="mailto:awerth13@gmail.com"
+            href={`mailto:${siteConfig.email}`}
             className="px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium font-body hover:opacity-90 transition-opacity"
           >
             Get in Touch
@@ -70,7 +65,7 @@ const NavBar = () => {
             className="md:hidden bg-background border-b border-border overflow-hidden"
           >
             <div className="px-6 py-4 space-y-3">
-              {links.map((l) => (
+              {siteConfig.navLinks.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
@@ -81,7 +76,7 @@ const NavBar = () => {
                 </a>
               ))}
               <a
-                href="mailto:awerth13@gmail.com"
+                href={`mailto:${siteConfig.email}`}
                 className="block text-center px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium font-body"
               >
                 Get in Touch

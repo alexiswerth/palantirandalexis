@@ -48,8 +48,8 @@ export interface SiteConfig {
 const siteConfig: SiteConfig = {
   name: "Alexis Werth",
   suffix: "Esq.",
-  tagline: "Your Next Frontier Counsel",
-  bio: "In-house counsel with 8+ years at the intersection of AI, privacy, and technology law. Deep expertise in privacy program design, AI compliance, complex commercial transactions, and legal ops.",
+  tagline: "VP-Ready Legal Leader for High-Growth Tech",
+  bio: "In-house counsel with 8+ years navigating Series C through public-company scale. Deep expertise in AI compliance, data privacy, commercial transactions, and legal operations. Ready to lead your legal function from growth stage to IPO and beyond.",
   email: "awerth13@gmail.com",
   phone: "5163198772",
   phoneDisplay: "516.319.8772",
@@ -57,11 +57,11 @@ const siteConfig: SiteConfig = {
   barAdmissions: ["New York", "New Jersey"],
   community: "Counselwell | Region Lead (NYC)",
   resumePath: "/Alexis_Werth_Resume.pdf",
-  ctaLabel: "Why I'm Your Frontier Counsel",
-  ctaAnchor: "#why-anthropic",
+  ctaLabel: "See What I Bring",
+  ctaAnchor: "#value-proposition",
 
   navLinks: [
-    { label: "Why Anthropic", href: "#why-anthropic" },
+    { label: "Why Me", href: "#value-proposition" },
     { label: "Experience", href: "#experience" },
     { label: "Education", href: "#education" },
   ],
@@ -132,15 +132,27 @@ const siteConfig: SiteConfig = {
   fitItems: [
     {
       iconName: "Brain",
-      jobReq: "Advise on AI data usage, privacy, and cross-border compliance",
+      jobReq: "Lead AI governance, privacy strategy, and cross-border data compliance",
       myFit: "Designed Drata's privacy program end-to-end: AI compliance, DataGrail workflows, cookie/pixel governance. Primary point of contact for all privacy requests, partnering with Product to embed legal at the development level.",
-      tags: ["AI Compliance", "Privacy", "Data Governance"],
+      tags: ["AI Governance", "Privacy Strategy", "Data Compliance"],
     },
     {
       iconName: "Shield",
-      jobReq: "8+ years in-house with deep AI and technology law expertise",
-      myFit: "8+ years spanning in-house roles at Drata, Snappy, Mimecast, and Prometric. Handles majority of commercial deal flow (DPAs, MSAs, NDAs). JD from CUNY, BS from Cornell ILR. NY & NJ bar admissions.",
-      tags: ["8+ Years", "In-house", "Commercial"],
+      jobReq: "Scale legal operations from growth stage through IPO readiness",
+      myFit: "8+ years spanning in-house roles at Drata, Snappy, Mimecast, and Prometric. Handles majority of commercial deal flow (DPAs, MSAs, NDAs). Built AI-powered legal ops workflows that cut processing time by 30%.",
+      tags: ["Legal Ops", "Commercial", "Scalability"],
+    },
+    {
+      iconName: "Zap",
+      jobReq: "Drive innovation at the intersection of product, engineering, and legal",
+      myFit: "Resident AI architect for Legal: identifying, stress-testing, and deploying AI tools to reshape how legal work gets done. Partners with Product to embed legal review at the development level, not as an afterthought.",
+      tags: ["Innovation Counsel", "Product Legal", "AI Tools"],
+    },
+    {
+      iconName: "Globe",
+      jobReq: "Navigate complex regulatory landscapes across jurisdictions",
+      myFit: "NY & NJ bar admissions. JD from CUNY, BS from Cornell ILR. Deep experience with DPAs, cross-border data transfers, and multi-jurisdictional compliance frameworks for SaaS platforms.",
+      tags: ["Regulatory", "Cross-Border", "Multi-Jurisdiction"],
     },
   ],
 
