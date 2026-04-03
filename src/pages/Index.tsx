@@ -44,29 +44,31 @@ const Index = () => {
         </Suspense>
       </ErrorBoundary>
 
-      <ErrorBoundary section="hero" inline>
-        <Suspense fallback={<SectionFallback />}>
-          <HeroSection />
-        </Suspense>
-      </ErrorBoundary>
+      <main>
+        <ErrorBoundary section="hero" inline>
+          <Suspense fallback={<SectionFallback />}>
+            <HeroSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary section="why-anthropic" inline>
-        <Suspense fallback={<SectionFallback />}>
-          <WhyAnthropicSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary section="why-anthropic" inline>
+          <Suspense fallback={<SectionFallback />}>
+            <WhyAnthropicSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary section="experience" inline>
-        <Suspense fallback={<SectionFallback />}>
-          <ExperienceSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary section="experience" inline>
+          <Suspense fallback={<SectionFallback />}>
+            <ExperienceSection />
+          </Suspense>
+        </ErrorBoundary>
 
-      <ErrorBoundary section="education" inline>
-        <Suspense fallback={<SectionFallback />}>
-          <EducationSection />
-        </Suspense>
-      </ErrorBoundary>
+        <ErrorBoundary section="education" inline>
+          <Suspense fallback={<SectionFallback />}>
+            <EducationSection />
+          </Suspense>
+        </ErrorBoundary>
+      </main>
 
       {/* Footer */}
       <footer className="py-12 text-center">
