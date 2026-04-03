@@ -19,7 +19,7 @@ describe("NavBar", () => {
 
   it("renders desktop nav links", () => {
     render(<NavBar />);
-    expect(screen.getByText("Why Anthropic")).toBeInTheDocument();
+    expect(screen.getByText("Why Me")).toBeInTheDocument();
     expect(screen.getByText("Experience")).toBeInTheDocument();
     expect(screen.getByText("Education")).toBeInTheDocument();
   });
@@ -36,8 +36,7 @@ describe("NavBar", () => {
     render(<NavBar />);
     const toggle = screen.getByRole("button");
     fireEvent.click(toggle);
-    // Mobile menu items rendered (duplicates of desktop)
-    const links = screen.getAllByText("Why Anthropic");
+    const links = screen.getAllByText("Why Me");
     expect(links.length).toBeGreaterThanOrEqual(2);
   });
 
@@ -45,11 +44,9 @@ describe("NavBar", () => {
     render(<NavBar />);
     fireEvent.click(screen.getByRole("button"));
     const mobileLinks = screen.getAllByText("Experience");
-    // Click the mobile one (last)
     fireEvent.click(mobileLinks[mobileLinks.length - 1]);
   });
 
-  // Edge: scroll state
   it("responds to scroll events", () => {
     render(<NavBar />);
     Object.defineProperty(window, "scrollY", { value: 100, writable: true });
