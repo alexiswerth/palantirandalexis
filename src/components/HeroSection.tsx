@@ -129,7 +129,7 @@ const HeroSection = () => {
             <span className="flex items-center gap-1.5">
               <Scale className="w-4 h-4" /> {barAdmissions.join(" & ")} Bar
             </span>
-            <span className="hidden sm:inline text-border">|</span>
+            <span className="basis-full h-0 sm:hidden" />
             <span className="flex items-center gap-1.5">
               <Globe className="w-4 h-4" /> {community}
             </span>
