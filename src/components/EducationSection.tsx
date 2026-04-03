@@ -37,10 +37,10 @@ const EducationSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            initial={{ opacity: 0, y: 35, scale: 0.96 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ delay: 0.12, duration: 0.6, ease: "easeOut" }}
             className="experience-card"
           >
             <div className="flex items-start gap-4">
