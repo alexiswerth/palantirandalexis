@@ -112,31 +112,34 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground font-body"
+            className="mt-8 flex flex-col items-center gap-3 text-sm text-muted-foreground font-body"
           >
-            <a href={`mailto:${email}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
-              <Mail className="w-4 h-4" /> {email}
-            </a>
-            <span className="hidden sm:inline text-border">|</span>
-            <a href={`tel:${phone}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
-              <Phone className="w-4 h-4" /> {phoneDisplay}
-            </a>
-            <span className="hidden sm:inline text-border">|</span>
-            <span className="flex items-center gap-1.5">
-              <MapPin className="w-4 h-4" /> {location}
-            </span>
-            <span className="hidden sm:inline text-border">|</span>
-            <span className="flex items-center gap-1.5">
-              <Scale className="w-4 h-4" /> {barAdmissions.join(" & ")} Bar
-            </span>
-            <span className="hidden sm:inline text-border">|</span>
-            <span className="flex items-center gap-1.5">
-              <Globe className="w-4 h-4" /> {community}
-            </span>
-            <span className="hidden sm:inline text-border">|</span>
-            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-accent transition-all duration-200 hover:scale-105">
-              <Linkedin className="w-4 h-4 transition-transform duration-200 group-hover:rotate-[-6deg]" /> LinkedIn
-            </a>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a href={`mailto:${email}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
+                <Mail className="w-4 h-4" /> {email}
+              </a>
+              <span className="hidden sm:inline text-border">|</span>
+              <a href={`tel:${phone}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
+                <Phone className="w-4 h-4" /> {phoneDisplay}
+              </a>
+              <span className="hidden sm:inline text-border">|</span>
+              <a href={linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-accent transition-all duration-200 hover:scale-105">
+                <Linkedin className="w-4 h-4" /> LinkedIn
+              </a>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <span className="flex items-center gap-1.5">
+                <MapPin className="w-4 h-4" /> {location}
+              </span>
+              <span className="hidden sm:inline text-border">|</span>
+              <span className="flex items-center gap-1.5">
+                <Scale className="w-4 h-4" /> {barAdmissions.join(" & ")} Bar
+              </span>
+              <span className="hidden sm:inline text-border">|</span>
+              <span className="flex items-center gap-1.5">
+                <Globe className="w-4 h-4" /> {community}
+              </span>
+            </div>
           </motion.div>
 
           <motion.div
