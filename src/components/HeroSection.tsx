@@ -115,11 +115,11 @@ const HeroSection = () => {
             className="mt-8 flex flex-col items-center gap-3 text-sm text-muted-foreground font-body"
           >
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <a href={`mailto:${email}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
+              <a href={`mailto:${email}`} className="flex items-center gap-1.5 hover:text-accent transition-all duration-200 hover:scale-105">
                 <Mail className="w-4 h-4" /> {email}
               </a>
               <span className="hidden sm:inline text-border">|</span>
-              <a href={`tel:${phone}`} className="flex items-center gap-1.5 hover:text-accent transition-colors">
+              <a href={`tel:${phone}`} className="flex items-center gap-1.5 hover:text-accent transition-all duration-200 hover:scale-105">
                 <Phone className="w-4 h-4" /> {phoneDisplay}
               </a>
               <span className="hidden sm:inline text-border">|</span>
