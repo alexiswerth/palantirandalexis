@@ -134,8 +134,8 @@ const HeroSection = () => {
               <Globe className="w-4 h-4" /> {community}
             </span>
             <span className="hidden sm:inline text-border">|</span>
-            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-accent transition-colors">
-              <Linkedin className="w-4 h-4" /> LinkedIn
+            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-accent transition-all duration-200 hover:scale-105">
+              <Linkedin className="w-4 h-4 transition-transform duration-200 group-hover:rotate-[-6deg]" /> LinkedIn
             </a>
           </motion.div>
 
