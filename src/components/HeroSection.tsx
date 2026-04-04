@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import headshot from "@/assets/alexis-headshot.webp";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import siteConfig from "@/lib/siteConfig";
-import { Mail, Phone, MapPin, Scale, Download, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Scale, Download, Globe, Linkedin } from "lucide-react";
 
 const sparkles = [
   { emoji: "\u2728", x: -120, y: -15, delay: 0, duration: 3 },
