@@ -52,7 +52,7 @@ const siteConfig: SiteConfig = {
   suffix: "Esq.",
   tagline: "Where Legal Meets Product & Innovation",
   bio: "In-house counsel with 8+ years navigating high-growth tech companies. Deep expertise in AI compliance, data privacy, commercial transactions, and legal operations. Ready to lead your legal function from growth stage to IPO and beyond.",
-  linkedin: "https://www.linkedin.com/in/alexiswerth",
+  linkedin: "https://www.linkedin.com/in/alexis-werth-80496b30/",
   email: "awerth13@gmail.com",
   phone: "5163198772",
   phoneDisplay: "516.319.8772",
