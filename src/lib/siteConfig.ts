@@ -30,6 +30,7 @@ export interface SiteConfig {
   suffix: string;
   tagline: string;
   bio: string;
+  linkedin: string;
   email: string;
   phone: string;
   phoneDisplay: string;
