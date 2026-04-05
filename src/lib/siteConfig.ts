@@ -125,7 +125,7 @@ const siteConfig: SiteConfig = {
 
   earlierRoles: [
     "Fractional Corporate Counsel \u2013 Axiom",
-    "Commercial & Product Counsel \u2013 Cisson",
+    "Commercial & Product Counsel \u2013 Cision",
     "Counsel \u2013 United Federation of Teachers",
     "Litigation Associate \u2013 Gottlieb & Janey",
     "Law Clerk \u2013 EEOC, Administrative Judge's Division",
