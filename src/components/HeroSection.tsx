@@ -16,7 +16,7 @@ const sparkles = [
 ];
 
 const HeroSection = () => {
-  const { name, suffix, tagline, bio, email, phone, phoneDisplay, location, barAdmissions, community, linkedin, resumePath, ctaLabel, ctaAnchor } = siteConfig;
+  const { name, suffix, tagline, bio, email, phone, phoneDisplay, location, barAdmissions, community, linkedin, github, resumePath, ctaLabel, ctaAnchor } = siteConfig;
 
   return (
     <section className="relative flex items-center justify-center overflow-hidden">
