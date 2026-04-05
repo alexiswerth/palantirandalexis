@@ -6,9 +6,10 @@ const EducationSection = () => {
     <section id="education" className="py-24 bg-secondary/50">
       <div className="container max-w-5xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20, scale: 0.96 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="mb-16"
         >
           <h2 className="section-heading">Education & Credentials</h2>
@@ -17,8 +18,8 @@ const EducationSection = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           <motion.div
-            initial={{ opacity: 0, y: 35, scale: 0.96 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="experience-card"
@@ -37,8 +38,8 @@ const EducationSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 35, scale: 0.96 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ delay: 0.12, duration: 0.6, ease: "easeOut" }}
             className="experience-card"
@@ -58,8 +59,8 @@ const EducationSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 35, scale: 0.96 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ delay: 0.24, duration: 0.6, ease: "easeOut" }}
             className="experience-card md:col-span-2"
