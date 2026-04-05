@@ -31,6 +31,7 @@ export interface SiteConfig {
   tagline: string;
   bio: string;
   linkedin: string;
+  github: string;
   email: string;
   phone: string;
   phoneDisplay: string;
