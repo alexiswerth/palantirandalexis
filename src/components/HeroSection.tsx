@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import headshot from "@/assets/alexis-headshot.webp";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import siteConfig from "@/lib/siteConfig";
-import { Mail, Phone, MapPin, Scale, Download, Globe, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Scale, Download, Globe, Linkedin, Github } from "lucide-react";
 
 const sparkles = [
   { emoji: "\u2728", x: -120, y: -15, delay: 0, duration: 3 },
@@ -16,7 +16,7 @@ const sparkles = [
 ];
 
 const HeroSection = () => {
-  const { name, suffix, tagline, bio, email, phone, phoneDisplay, location, barAdmissions, community, linkedin, resumePath, ctaLabel, ctaAnchor } = siteConfig;
+  const { name, suffix, tagline, bio, email, phone, phoneDisplay, location, barAdmissions, community, linkedin, github, resumePath, ctaLabel, ctaAnchor } = siteConfig;
 
   return (
     <section className="relative flex items-center justify-center overflow-hidden">
@@ -125,6 +125,10 @@ const HeroSection = () => {
               <span className="hidden sm:inline text-border">|</span>
               <a href={linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-accent transition-all duration-200 hover:scale-105">
                 <Linkedin className="w-4 h-4" /> LinkedIn
+              </a>
+              <span className="hidden sm:inline text-border">|</span>
+              <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-accent transition-all duration-200 hover:scale-105">
+                <Github className="w-4 h-4" /> GitHub
               </a>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4">
