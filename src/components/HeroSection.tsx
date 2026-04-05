@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import headshot from "@/assets/alexis-headshot.webp";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import siteConfig from "@/lib/siteConfig";
 import { Mail, Phone, MapPin, Scale, Download, Globe, Linkedin, Github } from "lucide-react";
+
+const BLUR_PLACEHOLDER = "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBQCdASoUABQAPzmUwVmvKicjqAgB4CcJYwC7ABDBDCHVKlx3Q3PpUnQ8yVzVZmcAAP7LPWWI1GnA+iwQDEwJogACAf3e7L7WHJcWe0Jp7BXRtqKeUosKqFJ///0XiU8FRVTyBtMO0u5uuQMuFWsNtfbhjtVG2hMJBAvawMzHH24CMsoOAJ8oAZE4e6RQRHIa0BcAAAA=";
 
 const sparkles = [
   { emoji: "\u2728", x: -120, y: -15, delay: 0, duration: 3 },
@@ -17,6 +20,7 @@ const sparkles = [
 
 const HeroSection = () => {
   const { name, suffix, tagline, bio, email, phone, phoneDisplay, location, barAdmissions, community, linkedin, github, resumePath, ctaLabel, ctaAnchor } = siteConfig;
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <section className="relative flex items-center justify-center overflow-hidden">
@@ -51,7 +55,25 @@ const HeroSection = () => {
                 }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
-                <ImageWithFallback src={headshot} alt={name} className="w-full h-full object-cover" width={416} height={416} loading="eager" fetchPriority="high" />
+                {/* Blur placeholder */}
+                {!imageLoaded && (
+                  <img
+                    src={BLUR_PLACEHOLDER}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover scale-110 blur-lg"
+                    aria-hidden="true"
+                  />
+                )}
+                <ImageWithFallback
+                  src={headshot}
+                  alt={name}
+                  className={`w-full h-full object-cover transition-opacity duration-500 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
+                  width={416}
+                  height={416}
+                  loading="eager"
+                  fetchPriority="high"
+                  onLoad={() => setImageLoaded(true)}
+                />
               </motion.div>
             </div>
           </motion.div>

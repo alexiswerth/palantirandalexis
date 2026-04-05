@@ -4,45 +4,33 @@ import siteConfig from "@/lib/siteConfig";
 
 const iconMap: Record<string, React.ElementType> = { Brain, Shield, Zap, Globe };
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
 const ValuePropositionSection = () => {
   return (
     <section id="value-proposition" className="py-16 bg-secondary/50">
       <div className="container max-w-5xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-10"
         >
           <h2 className="section-heading">What I Bring to Your Team</h2>
           <div className="accent-line mx-auto mt-4" />
         </motion.div>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-6"
-        >
+        <div className="grid md:grid-cols-2 gap-6">
           {siteConfig.fitItems.map((fi, i) => {
             const Icon = iconMap[fi.iconName] || Brain;
             return (
-              <motion.div key={i} variants={item} className="experience-card flex flex-col justify-between min-h-[320px]">
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40, rotateX: 8 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
+                className="experience-card flex flex-col justify-between min-h-[320px]"
+              >
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2.5 rounded-xl bg-muted-foreground/10 text-muted-foreground shrink-0">
@@ -75,7 +63,7 @@ const ValuePropositionSection = () => {
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

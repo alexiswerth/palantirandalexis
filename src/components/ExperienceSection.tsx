@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useCallback } from "react";
-import { ChevronDown, Building2, Calendar } from "lucide-react";
+import { ChevronDown, Building2, Calendar, Briefcase } from "lucide-react";
 import { getExpandedCards, setExpandedCard, getEarlierExpanded, setEarlierExpanded } from "@/lib/persistence";
 import siteConfig from "@/lib/siteConfig";
 import type { ExperienceData } from "@/lib/siteConfig";
@@ -17,8 +17,8 @@ const ExperienceCard = ({ exp, index }: { exp: ExperienceData; index: number }) 
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40, scale: 0.97 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40, scale: 0.97 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
       className="relative"
@@ -69,6 +69,22 @@ const ExperienceCard = ({ exp, index }: { exp: ExperienceData; index: number }) 
   );
 };
 
+const EarlierRoleItem = ({ role, index }: { role: string; index: number }) => (
+  <motion.li
+    initial={{ opacity: 0, x: -20 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.3, delay: index * 0.05 }}
+    className="relative flex items-start gap-4 pl-6"
+  >
+    <div className="absolute left-0 top-0 bottom-0 w-px bg-border" />
+    <div className="absolute left-[-3px] top-2 w-[7px] h-[7px] rounded-full bg-muted-foreground/40 border border-border" />
+    <div className="flex items-center gap-2 py-1.5">
+      <Briefcase className="w-3.5 h-3.5 text-muted-foreground/50 shrink-0" />
+      <span className="text-sm text-muted-foreground font-body">{role}</span>
+    </div>
+  </motion.li>
+);
+
 const ExperienceSection = () => {
   const [showEarlier, setShowEarlier] = useState(getEarlierExpanded());
 
@@ -84,8 +100,8 @@ const ExperienceSection = () => {
     <section id="experience" className="py-24">
       <div className="container max-w-5xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="mb-16"
@@ -111,7 +127,7 @@ const ExperienceSection = () => {
             className="flex items-center gap-2 text-sm font-medium text-accent font-body hover:opacity-80 transition-opacity"
           >
             <ChevronDown className={`w-4 h-4 transition-transform ${showEarlier ? "rotate-180" : ""}`} />
-            Earlier Experience (2015–2021)
+            Earlier Experience (2015 to 2021)
           </button>
           <motion.div
             initial={false}
@@ -119,12 +135,9 @@ const ExperienceSection = () => {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <ul className="mt-4 space-y-2">
-              {siteConfig.earlierRoles.map((role) => (
-                <li key={role} className="flex gap-3 text-sm text-muted-foreground font-body">
-                  <span className="w-1.5 h-1.5 rounded-full bg-border shrink-0 mt-2" />
-                  {role}
-                </li>
+            <ul className="mt-4 space-y-0 ml-2">
+              {siteConfig.earlierRoles.map((role, i) => (
+                <EarlierRoleItem key={role} role={role} index={i} />
               ))}
             </ul>
           </motion.div>
