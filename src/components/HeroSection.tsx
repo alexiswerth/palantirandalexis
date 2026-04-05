@@ -100,7 +100,7 @@ const HeroSection = () => {
                 {s.emoji}
               </motion.span>
             ))}
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight font-heading text-primary">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-primary" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
               {name}
             </h1>
           </motion.div>
