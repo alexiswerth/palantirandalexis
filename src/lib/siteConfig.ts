@@ -126,8 +126,8 @@ const siteConfig: SiteConfig = {
   earlierRoles: [
     "Fractional Corporate Counsel \u2013 Axiom",
     "Commercial & Product Counsel \u2013 Cision",
-    "Counsel \u2013 United Federation of Teachers",
     "Director, Legal & Business Affairs \u2013 Kasirer LLC",
+    "Counsel \u2013 United Federation of Teachers",
     "Litigation Associate \u2013 Gottlieb & Janey",
     "Law Clerk \u2013 EEOC, Administrative Judge's Division",
     "Peggy Browning Fellow \u2013 Meyer, Suozzi, English & Klein, P.C.",
