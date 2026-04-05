@@ -126,6 +126,10 @@ const HeroSection = () => {
               <a href={linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-accent transition-all duration-200 hover:scale-105">
                 <Linkedin className="w-4 h-4" /> LinkedIn
               </a>
+              <span className="hidden sm:inline text-border">|</span>
+              <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-accent transition-all duration-200 hover:scale-105">
+                <Github className="w-4 h-4" /> GitHub
+              </a>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <span className="flex items-center gap-1.5">
