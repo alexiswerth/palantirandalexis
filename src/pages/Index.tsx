@@ -91,6 +91,7 @@ const Index = () => {
           </p>
         </motion.div>
       </footer>
+      <ScrollToTop />
     </div>
   );
 };
