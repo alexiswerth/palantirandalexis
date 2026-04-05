@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 
-interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface ImageWithFallbackProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'onLoad'> {
+  onLoad?: () => void;
   fallbackSrc?: string;
   /** Set to "eager" for LCP/above-fold images */
   loading?: "lazy" | "eager";
