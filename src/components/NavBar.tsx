@@ -87,7 +87,8 @@ const NavBar = () => {
                     const target = document.querySelector(l.href);
                     if (target) {
                       setTimeout(() => {
-                        target.scrollIntoView({ behavior: "smooth", block: "start" });
+                        const y = target.getBoundingClientRect().top + window.scrollY - 80;
+                        window.scrollTo({ top: y, behavior: "smooth" });
                       }, 300);
                     }
                   }}
