@@ -32,7 +32,18 @@ const NavBar = () => {
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {siteConfig.navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="nav-link">
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.querySelector(l.href);
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}
+              className="nav-link"
+            >
               {l.label}
             </a>
           ))}
