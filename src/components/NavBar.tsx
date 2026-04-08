@@ -69,7 +69,16 @@ const NavBar = () => {
                 <a
                   key={l.href}
                   href={l.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileOpen(false);
+                    const target = document.querySelector(l.href);
+                    if (target) {
+                      setTimeout(() => {
+                        target.scrollIntoView({ behavior: "smooth", block: "start" });
+                      }, 300);
+                    }
+                  }}
                   className="block nav-link py-2"
                 >
                   {l.label}
