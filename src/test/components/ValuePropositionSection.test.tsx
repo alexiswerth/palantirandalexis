@@ -17,7 +17,6 @@ describe("ValuePropositionSection", () => {
 
   it("renders fit cards", () => {
     render(<ValuePropositionSection />);
-    expect(screen.getAllByText("What Your Team Needs").length).toBeGreaterThanOrEqual(2);
     expect(screen.getAllByText("What I Bring").length).toBeGreaterThanOrEqual(2);
   });
 

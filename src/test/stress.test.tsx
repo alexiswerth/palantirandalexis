@@ -2,13 +2,13 @@ import { describe, it, expect, vi } from "vitest";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 
-// Mock framer-motion globally for stress tests
 vi.mock("framer-motion", () => ({
   motion: {
     div: ({ children, ...props }: any) => <div>{children}</div>,
     span: ({ children, ...props }: any) => <span>{children}</span>,
     p: ({ children, ...props }: any) => <p>{children}</p>,
     nav: ({ children, ...props }: any) => <nav>{children}</nav>,
+    li: ({ children, ...props }: any) => <li>{children}</li>,
   },
   AnimatePresence: ({ children }: any) => <>{children}</>,
   useScroll: () => ({ scrollYProgress: { get: () => 0 } }),
@@ -20,13 +20,16 @@ vi.mock("@/assets/alexis-headshot.webp", () => ({ default: "mock.webp" }));
 import Index from "@/pages/Index";
 
 describe("Stress Tests", () => {
-  it("full page renders without crashing", () => {
+  it("full page renders without crashing", async () => {
     const { container } = render(
       <MemoryRouter>
         <Index />
       </MemoryRouter>
     );
-    expect(container.querySelector("footer")).toBeInTheDocument();
+    // Wait for the loader to transition
+    await vi.waitFor(() => {
+      expect(container.querySelector("footer")).toBeInTheDocument();
+    }, { timeout: 2000 });
   });
 
   it("survives 50 rapid full-page mounts/unmounts", () => {
@@ -64,7 +67,6 @@ describe("Stress Tests", () => {
     }
   });
 
-  // Production constraint: no content exceeds viewport expectations
   it("all text content is non-empty", () => {
     const { container } = render(
       <MemoryRouter>
@@ -77,7 +79,6 @@ describe("Stress Tests", () => {
     });
   });
 
-  // No broken links (mailto, tel, anchor)
   it("all links have valid href", () => {
     const { container } = render(
       <MemoryRouter>
@@ -93,13 +94,12 @@ describe("Stress Tests", () => {
     });
   });
 
-  // No em dashes anywhere on the full page
   it("entire page has zero em dashes", () => {
     const { container } = render(
       <MemoryRouter>
         <Index />
       </MemoryRouter>
     );
-    expect(container.textContent).not.toContain("—");
+    expect(container.textContent).not.toContain("\u2014");
   });
 });
