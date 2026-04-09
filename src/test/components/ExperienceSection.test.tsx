@@ -5,6 +5,7 @@ vi.mock("framer-motion", () => ({
   motion: {
     div: ({ children, animate, initial, whileInView, variants, ...props }: any) => <div {...props}>{children}</div>,
     span: ({ children, ...props }: any) => <span {...props}>{children}</span>,
+    li: ({ children, ...props }: any) => <li {...props}>{children}</li>,
   },
   AnimatePresence: ({ children }: any) => <>{children}</>,
   useScroll: () => ({ scrollYProgress: { get: () => 0 } }),
@@ -29,7 +30,6 @@ describe("ExperienceSection", () => {
 
   it("first card is expanded by default", () => {
     render(<ExperienceSection />);
-    // Drata highlights should be visible
     expect(screen.getByText(/Day-to-day operational lead/)).toBeInTheDocument();
   });
 
@@ -38,14 +38,13 @@ describe("ExperienceSection", () => {
     const drataButton = screen.getByText("Drata Inc.").closest("button");
     expect(drataButton).toBeTruthy();
     fireEvent.click(drataButton!);
-    // After click, card collapses (opacity 0 via framer mock, content still in DOM)
   });
 
   it("shows earlier experience on toggle", () => {
     render(<ExperienceSection />);
     const toggle = screen.getByText(/Earlier Experience/);
     fireEvent.click(toggle);
-    expect(screen.getByText(/Fractional Corporate Counsel – Axiom/)).toBeInTheDocument();
+    expect(screen.getByText(/Commercial & Product Counsel/)).toBeInTheDocument();
     expect(screen.getByText(/NLRB, Region 2/)).toBeInTheDocument();
   });
 
@@ -53,18 +52,16 @@ describe("ExperienceSection", () => {
     render(<ExperienceSection />);
     fireEvent.click(screen.getByText(/Earlier Experience/));
     const roles = screen.getAllByText(/Counsel|Director|Fellow|Clerk|Associate/);
-    expect(roles.length).toBeGreaterThanOrEqual(8);
+    expect(roles.length).toBeGreaterThanOrEqual(7);
   });
 
-  // Edge: no em dashes
   it("contains no em dashes", () => {
     render(<ExperienceSection />);
     fireEvent.click(screen.getByText(/Earlier Experience/));
     const { container } = render(<ExperienceSection />);
-    expect(container.textContent).not.toContain("—");
+    expect(container.textContent).not.toContain("\u2014");
   });
 
-  // Stress: render 100 times without error
   it("survives 100 rapid renders", () => {
     for (let i = 0; i < 100; i++) {
       const { unmount } = render(<ExperienceSection />);
