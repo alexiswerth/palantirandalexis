@@ -30,7 +30,7 @@ describe("ExperienceSection", () => {
   it("first card is expanded by default", () => {
     render(<ExperienceSection />);
     // Drata highlights should be visible
-    expect(screen.getByText(/Day-to-day operational backbone/)).toBeInTheDocument();
+    expect(screen.getByText(/Day-to-day operational lead/)).toBeInTheDocument();
   });
 
   it("toggles experience card on click", () => {
