@@ -127,7 +127,7 @@ const ExperienceSection = () => {
             className="flex items-center gap-2 text-sm font-medium text-accent font-body hover:opacity-80 transition-opacity"
           >
             <ChevronDown className={`w-4 h-4 transition-transform ${showEarlier ? "rotate-180" : ""}`} />
-            Earlier Experience (2015 to 2021)
+            Additional Experience
           </button>
           <motion.div
             initial={false}
