@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import siteConfig from "@/lib/siteConfig";
 
@@ -24,12 +23,22 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, closeMobile = false) => {
+    e.preventDefault();
+    if (closeMobile) setMobileOpen(false);
+    const scroll = () => {
+      const target = document.querySelector(href);
+      if (target) {
+        const y = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    };
+    closeMobile ? setTimeout(scroll, 300) : scroll();
+  };
+
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-nav-slide-in ${
         scrolled
           ? "bg-background/90 backdrop-blur-md shadow-sm border-b border-border"
           : "bg-transparent"
@@ -46,14 +55,7 @@ const NavBar = () => {
             <a
               key={l.href}
               href={l.href}
-              onClick={(e) => {
-                e.preventDefault();
-                const target = document.querySelector(l.href);
-                if (target) {
-                  const y = target.getBoundingClientRect().top + window.scrollY - 80;
-                  window.scrollTo({ top: y, behavior: "smooth" });
-                }
-              }}
+              onClick={(e) => handleNavClick(e, l.href)}
               className="nav-link"
             >
               {l.label}
@@ -79,46 +81,31 @@ const NavBar = () => {
       </div>
 
       {/* Mobile menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
+      <div
+        className={`md:hidden bg-background border-b border-border overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
+          mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-6 py-4 space-y-3">
+          {siteConfig.navLinks.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={(e) => handleNavClick(e, l.href, true)}
+              className="block nav-link py-2"
+            >
+              {l.label}
+            </a>
+          ))}
+          <a
+            href={`mailto:${siteConfig.email}`}
+            className="block text-center px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium font-body"
           >
-            <div className="px-6 py-4 space-y-3">
-              {siteConfig.navLinks.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setMobileOpen(false);
-                    const target = document.querySelector(l.href);
-                    if (target) {
-                      setTimeout(() => {
-                        const y = target.getBoundingClientRect().top + window.scrollY - 80;
-                        window.scrollTo({ top: y, behavior: "smooth" });
-                      }, 300);
-                    }
-                  }}
-                  className="block nav-link py-2"
-                >
-                  {l.label}
-                </a>
-              ))}
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="block text-center px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium font-body"
-              >
-                Get in Touch
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </nav>
   );
 };
 
