@@ -1,5 +1,14 @@
 // Site data configuration: single source of truth for all content
 // Edit here to update the entire site
+//
+// To target a different posting:
+//   1. Add or edit a file in src/lib/targetRoles/
+//   2. Export it from src/lib/targetRoles/index.ts
+//   3. Swap the import below from `palantirCommercialCounsel` to your role
+import { palantirCommercialCounsel } from "./targetRoles";
+// Example alternate role (kept for reference):
+// import { stripeCommercialCounsel } from "./targetRoles";
+
 
 export interface ExperienceData {
   id: string;
@@ -81,99 +90,8 @@ export interface SiteConfig {
   navLinks: { label: string; href: string }[];
 }
 
-// Define the targeted role first; the rest of siteConfig derives from it.
-const targetRole: TargetRole = {
-  company: "Palantir Technologies",
-  role: "Commercial Counsel",
-  location: "New York, NY (Hybrid)",
-  url: "https://jobs.lever.co/palantir/12e174ac-e32a-4990-b21e-6abc49b5fb8d",
-
-  heroSuffix: "Esq. | Commercial Counsel Candidate, Palantir",
-  tagline: "Commercial Contracting, IP & Scalable Legal Infrastructure",
-  bio: "In-house commercial counsel with 8+ years at high-growth SaaS companies. Lead negotiator on complex SaaS, licensing, and IP-heavy transactions, with a track record of building scalable legal infrastructure that lets engineering and business teams move faster. Ready to own Palantir's most strategic commercial and IP work from day one.",
-
-  ctaLabel: "See Why I Fit Palantir",
-  navLabel: "Why Palantir",
-
-  badgeLabel: "Tailored Application",
-  sectionHeading: "Why I'm Built for This Role",
-  matches: [
-    {
-      requirement: "Lead drafting and negotiation of commercial customer contracts",
-      proof: "Currently handles the majority of Drata's commercial deal flow; closed Snappy deals driving 50%+ of 2024 revenue.",
-    },
-    {
-      requirement: "IP subject matter expert: strategic licensing and complex IP transactions",
-      proof: "Negotiated IP, licensing, and data rights provisions across SaaS, procurement, and partner agreements at four in-house roles.",
-    },
-    {
-      requirement: "Build scalable legal infrastructure for a rapidly expanding customer portfolio",
-      proof: "Designed an Ironclad x Salesforce workflow that cut sales-request processing time by 30%; deploying AI tooling across Drata Legal.",
-    },
-    {
-      requirement: "Open source management, in-licensed components, product marketing support",
-      proof: "Embedded with Product and Engineering at Drata and Snappy; advises on third-party components and go-to-market materials.",
-    },
-    {
-      requirement: "Collaborate cross-functionally with Business, Ops, Finance, and Engineering",
-      proof: "Sole Legal rep on Snappy's Procurement Committee ($14M+ annual spend); daily partner to Sales, Security, and Product.",
-    },
-    {
-      requirement: "Attorney in good standing, 3-7 years transactional experience",
-      proof: "Admitted in NY and NJ; 8+ years of transactional and in-house experience across SaaS, cybersecurity, and assessment platforms.",
-    },
-  ],
-
-  seoTitle: "Alexis Werth | Commercial Counsel Candidate, Palantir",
-  seoDescription: "Alexis Werth, Esq.: tailored application for Palantir's Commercial Counsel role. 8+ years in-house at high-growth SaaS leading commercial contracting, IP/licensing, and scalable legal infrastructure.",
-  seoOgImageAlt: "Alexis Werth, Esq.: Commercial Counsel candidate for Palantir Technologies",
-};
-
-// ---------------------------------------------------------------------------
-// EXAMPLE: To target a different posting, copy the block above, edit the
-// fields below, and assign it to `targetRole` (rename this to `targetRole`
-// and rename the current one to something else, or just swap the values).
-// Everything downstream (hero suffix, tagline, bio, CTA, nav link, SEO meta,
-// JSON-LD, and the Job Match section) updates automatically.
-// ---------------------------------------------------------------------------
-// const targetRoleExample: TargetRole = {
-//   company: "Stripe",
-//   role: "Commercial Counsel, Enterprise",
-//   location: "New York, NY (Hybrid)",
-//   url: "https://stripe.com/jobs/listing/commercial-counsel-enterprise/0000000",
-//
-//   heroSuffix: "Esq. | Commercial Counsel Candidate, Stripe",
-//   tagline: "Enterprise SaaS Contracting, Payments & Scalable Legal Ops",
-//   bio: "In-house commercial counsel with 8+ years at high-growth SaaS companies. Lead negotiator on enterprise SaaS and payments-adjacent transactions, with a track record of building scalable legal infrastructure that lets revenue teams move faster.",
-//
-//   ctaLabel: "See Why I Fit Stripe",
-//   navLabel: "Why Stripe",
-//
-//   badgeLabel: "Tailored Application",
-//   sectionHeading: "Why I'm Built for This Role",
-//   matches: [
-//     {
-//       requirement: "Lead enterprise commercial contract negotiations",
-//       proof: "Handles the majority of Drata's commercial deal flow; closed Snappy deals driving 50%+ of 2024 revenue.",
-//     },
-//     {
-//       requirement: "Partner with Sales, Product, and Finance on complex deals",
-//       proof: "Sole Legal rep on Snappy's Procurement Committee ($14M+ annual spend); daily partner to Sales, Security, and Product at Drata.",
-//     },
-//     {
-//       requirement: "Build scalable contracting infrastructure",
-//       proof: "Designed an Ironclad x Salesforce workflow that cut sales-request processing time by 30%; deploying AI tooling across Drata Legal.",
-//     },
-//     {
-//       requirement: "Attorney in good standing, 5+ years transactional experience",
-//       proof: "Admitted in NY and NJ; 8+ years of transactional and in-house experience across SaaS and cybersecurity.",
-//     },
-//   ],
-//
-//   seoTitle: "Alexis Werth | Commercial Counsel Candidate, Stripe",
-//   seoDescription: "Alexis Werth, Esq.: tailored application for Stripe's Enterprise Commercial Counsel role. 8+ years in-house at high-growth SaaS leading commercial contracting and scalable legal ops.",
-//   seoOgImageAlt: "Alexis Werth, Esq.: Commercial Counsel candidate for Stripe",
-// };
+// Active target role - swap the import at the top of this file to retarget.
+const targetRole: TargetRole = palantirCommercialCounsel;
 
 const siteConfig: SiteConfig = {
   name: "Alexis Werth",

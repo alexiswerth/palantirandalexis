@@ -7,17 +7,24 @@ role with one edit.
 
 ## Swapping to a different role
 
-All role-specific content lives in `src/lib/siteConfig.ts` under the
-`targetRole` constant. To target a new posting:
+Each role lives in its own file under `src/lib/targetRoles/`. The active
+role is selected by a single import in `src/lib/siteConfig.ts`.
+
+**To swap to an existing role** (e.g. Stripe instead of Palantir):
 
 1. Open `src/lib/siteConfig.ts`.
-2. Edit the fields inside `const targetRole: TargetRole = { ... }`.
-3. Save. The dev server hot-reloads the React UI; SEO tags update on the next
-   page reload (the Vite plugin re-reads the file).
+2. Change the import at the top from `palantirCommercialCounsel` to
+   `stripeCommercialCounsel`.
+3. Update the active assignment: `const targetRole: TargetRole = stripeCommercialCounsel;`.
+4. Save. The dev server hot-reloads the React UI; SEO tags update on the next
+   page reload (the Vite plugin re-reads the role file).
 
-A commented-out `targetRoleExample` block (Stripe Commercial Counsel) sits
-right below the active `targetRole` as a starting template. Copy its fields
-over the active block and update the values.
+**To add a new role:**
+
+1. Copy `src/lib/targetRoles/palantir.ts` to a new file, e.g. `acme.ts`.
+2. Rename the export and edit all fields.
+3. Re-export it from `src/lib/targetRoles/index.ts`.
+4. Import and assign it in `src/lib/siteConfig.ts` as above.
 
 ## What each field drives
 
