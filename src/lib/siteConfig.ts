@@ -31,20 +31,37 @@ export interface JobMatchPoint {
 }
 
 export interface TargetRole {
+  // Identity
   company: string;
   role: string;
   location: string;
   url: string;
+
+  // Hero copy
+  heroSuffix: string;
+  tagline: string;
+  bio: string;
+
+  // CTA + nav
+  ctaLabel: string;
+  navLabel: string;
+
+  // Job-match section
   badgeLabel: string;
   sectionHeading: string;
   matches: JobMatchPoint[];
+
+  // SEO (consumed by Vite plugin to inject into index.html at build time)
+  seoTitle: string;
+  seoDescription: string;
+  seoOgImageAlt: string;
 }
 
 export interface SiteConfig {
   name: string;
-  suffix: string;
-  tagline: string;
-  bio: string;
+  suffix: string;            // derived from targetRole.heroSuffix
+  tagline: string;           // derived from targetRole.tagline
+  bio: string;               // derived from targetRole.bio
   linkedin: string;
   github: string;
   email: string;
@@ -54,7 +71,7 @@ export interface SiteConfig {
   barAdmissions: string[];
   community: string;
   resumePath: string;
-  ctaLabel: string;
+  ctaLabel: string;          // derived from targetRole.ctaLabel
   ctaAnchor: string;
   targetRole: TargetRole;
   experiences: ExperienceData[];
