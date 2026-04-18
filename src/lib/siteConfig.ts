@@ -1,5 +1,14 @@
 // Site data configuration: single source of truth for all content
 // Edit here to update the entire site
+//
+// To target a different posting:
+//   1. Add or edit a file in src/lib/targetRoles/
+//   2. Export it from src/lib/targetRoles/index.ts
+//   3. Swap the import below from `palantirCommercialCounsel` to your role
+import { palantirCommercialCounsel } from "./targetRoles";
+// Example alternate role (kept for reference):
+// import { stripeCommercialCounsel } from "./targetRoles";
+
 
 export interface ExperienceData {
   id: string;
