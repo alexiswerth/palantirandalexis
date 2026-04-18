@@ -25,6 +25,21 @@ export interface EducationData {
   location: string;
 }
 
+export interface JobMatchPoint {
+  requirement: string;
+  proof: string;
+}
+
+export interface TargetRole {
+  company: string;
+  role: string;
+  location: string;
+  url: string;
+  badgeLabel: string;
+  sectionHeading: string;
+  matches: JobMatchPoint[];
+}
+
 export interface SiteConfig {
   name: string;
   suffix: string;
@@ -41,6 +56,7 @@ export interface SiteConfig {
   resumePath: string;
   ctaLabel: string;
   ctaAnchor: string;
+  targetRole: TargetRole;
   experiences: ExperienceData[];
   earlierRoles: string[];
   fitItems: FitItem[];
@@ -64,6 +80,41 @@ const siteConfig: SiteConfig = {
   resumePath: "/Alexis_Werth_Resume.pdf",
   ctaLabel: "See Why I Fit Palantir",
   ctaAnchor: "#job-match",
+
+  targetRole: {
+    company: "Palantir Technologies",
+    role: "Commercial Counsel",
+    location: "New York, NY (Hybrid)",
+    url: "https://jobs.lever.co/palantir/12e174ac-e32a-4990-b21e-6abc49b5fb8d",
+    badgeLabel: "Tailored Application",
+    sectionHeading: "Why I'm Built for This Role",
+    matches: [
+      {
+        requirement: "Lead drafting and negotiation of commercial customer contracts",
+        proof: "Currently handles the majority of Drata's commercial deal flow; closed Snappy deals driving 50%+ of 2024 revenue.",
+      },
+      {
+        requirement: "IP subject matter expert: strategic licensing and complex IP transactions",
+        proof: "Negotiated IP, licensing, and data rights provisions across SaaS, procurement, and partner agreements at four in-house roles.",
+      },
+      {
+        requirement: "Build scalable legal infrastructure for a rapidly expanding customer portfolio",
+        proof: "Designed an Ironclad x Salesforce workflow that cut sales-request processing time by 30%; deploying AI tooling across Drata Legal.",
+      },
+      {
+        requirement: "Open source management, in-licensed components, product marketing support",
+        proof: "Embedded with Product and Engineering at Drata and Snappy; advises on third-party components and go-to-market materials.",
+      },
+      {
+        requirement: "Collaborate cross-functionally with Business, Ops, Finance, and Engineering",
+        proof: "Sole Legal rep on Snappy's Procurement Committee ($14M+ annual spend); daily partner to Sales, Security, and Product.",
+      },
+      {
+        requirement: "Attorney in good standing, 3-7 years transactional experience",
+        proof: "Admitted in NY and NJ; 8+ years of transactional and in-house experience across SaaS, cybersecurity, and assessment platforms.",
+      },
+    ],
+  },
 
   navLinks: [
     { label: "Why Palantir", href: "#job-match" },
