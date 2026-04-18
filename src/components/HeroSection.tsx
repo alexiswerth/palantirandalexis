@@ -105,14 +105,6 @@ const HeroSection = () => {
             </h1>
           </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="mt-2 text-sm font-body font-medium tracking-[0.25em] uppercase text-muted-foreground"
-          >
-            {suffix}
-          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
