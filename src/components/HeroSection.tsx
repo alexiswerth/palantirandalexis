@@ -19,7 +19,7 @@ const sparkles = [
 ];
 
 const HeroSection = () => {
-  const { name, suffix, tagline, bio, email, phone, phoneDisplay, location, barAdmissions, community, linkedin, github, resumePath, ctaLabel, ctaAnchor } = siteConfig;
+  const { name, tagline, bio, email, phone, phoneDisplay, location, barAdmissions, community, linkedin, github, resumePath, ctaLabel, ctaAnchor } = siteConfig;
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
