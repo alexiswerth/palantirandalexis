@@ -7,7 +7,7 @@ export const palantirCommercialCounsel: TargetRole = {
   url: "https://jobs.lever.co/palantir/12e174ac-e32a-4990-b21e-6abc49b5fb8d",
 
   heroSuffix: "Esq. | Commercial Counsel Candidate, Palantir",
-  tagline: "Commercial Contracting, IP & Scalable Legal Infrastructure",
+  tagline: "Commercial Counsel: SaaS, IP & Scale",
   bio: "In-house commercial counsel with 8+ years at high-growth SaaS companies. Lead negotiator on complex SaaS, licensing, and IP-heavy transactions, with a track record of building scalable legal infrastructure that lets engineering and business teams move faster. Ready to own Palantir's most strategic commercial and IP work from day one.",
 
   ctaLabel: "See Why I Fit Palantir",
