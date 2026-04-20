@@ -174,10 +174,20 @@ const siteConfig: SiteConfig = {
         "Drafted SOWs, MSAs, DPAs, and SLAs. Reviewed and updated company terms and conditions.",
       ],
     },
+    {
+      id: "cision",
+      company: "Brandwatch (now Cision)",
+      subtitle: "Global SaaS Consumer Intelligence Platform",
+      title: "Commercial & Product Counsel",
+      period: "2021",
+      highlights: [
+        "Commercial and product counsel supporting SaaS contracting, product launches, and go-to-market initiatives across a global consumer intelligence platform.",
+        "Negotiated SaaS agreements, DPAs, and partner deals with a focus on data rights, IP, and privacy.",
+      ],
+    },
   ],
 
   earlierRoles: [
-    "Commercial & Product Counsel \u2013 Cision",
     "Director, Legal & Business Affairs \u2013 Kasirer LLC",
     "Counsel \u2013 United Federation of Teachers",
     "Litigation Associate \u2013 Gottlieb & Janey",
