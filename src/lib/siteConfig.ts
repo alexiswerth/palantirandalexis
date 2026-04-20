@@ -187,6 +187,8 @@ const siteConfig: SiteConfig = {
   ],
 
   fitItems: [],
+
+  education: [
     { degree: "Juris Doctor", school: "City University of New York", location: "New York, NY" },
     { degree: "Bachelor of Science", field: "Industrial & Labor Relations", school: "Cornell University", location: "Ithaca, NY" },
   ],
