@@ -34,7 +34,7 @@ export const palantirCommercialCounsel: TargetRole = {
     },
     {
       requirement: "Collaborate cross-functionally with Business, Ops, Finance, and Engineering",
-      proof: "Sole Legal rep on Snappy's Procurement Committee ($14M+ annual spend); daily partner to Sales, Security, and Product.",
+      proof: "Sole Legal rep on Drata's Privacy Committee (GDPR/CCPA compliance); daily partner to Sales, Security, and Product on commercial and data-protection matters.",
     },
     {
       requirement: "Attorney in good standing, 3-7 years transactional experience",
