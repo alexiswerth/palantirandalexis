@@ -20,8 +20,8 @@ export const palantirCommercialCounsel: TargetRole = {
       iconName: "Handshake",
       label: "Complex Commercial Contracting",
       requirement: "Lead drafting and negotiation of revenue-generating customer contracts at a high-growth SaaS company.",
-      proof: "Owns the majority of Drata's commercial deal flow: enterprise SaaS agreements, MSAs, and DPAs negotiated end-to-end. At Snappy, closed customer deals representing over 50 percent of 2024 annual revenue and managed $14M+ in annual procurement.",
-      tags: ["Enterprise SaaS", "MSAs", "Deal Structuring"],
+      proof: "Ten plus years drafting and negotiating commercial contracts, with the last eight years in-house owning end-to-end SaaS, MSA, and DPA negotiations. Currently runs the majority of Drata's commercial deal flow; at Snappy, closed customer deals representing over 50 percent of 2024 annual revenue and managed $14M+ in annual procurement.",
+      tags: ["10+ Yrs Drafting", "Enterprise SaaS", "Deal Structuring"],
     },
     {
       iconName: "FileText",
