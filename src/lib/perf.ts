@@ -27,8 +27,8 @@ const metrics: PerfMetrics = {
   startTime: Date.now(),
 };
 
-// Expose for ErrorBoundary and debugging
-if (typeof window !== "undefined") {
+// Expose for ErrorBoundary and debugging (dev-only to avoid leaking error/stack data to third-party scripts in production)
+if (typeof window !== "undefined" && import.meta.env.DEV) {
   (window as any).__perf_metrics = metrics;
 }
 
