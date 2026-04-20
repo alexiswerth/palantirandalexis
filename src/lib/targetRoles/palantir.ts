@@ -17,28 +17,16 @@ export const palantirCommercialCounsel: TargetRole = {
   sectionHeading: "Why I'm Built for This Role",
   matches: [
     {
-      requirement: "Lead drafting and negotiation of commercial customer contracts",
-      proof: "Owns majority of Drata's commercial deal flow across enterprise SaaS agreements, DPAs, and BAAs; daily partner to Privacy on data-processing matters.",
-    },
-    {
-      requirement: "IP subject matter expert: strategic licensing and complex IP transactions",
-      proof: "Negotiated IP, licensing, and data rights provisions across SaaS, procurement, and partner agreements at four in-house roles.",
+      requirement: "Lead drafting and negotiation of complex commercial and IP-heavy SaaS contracts",
+      proof: "Owns the majority of Drata's commercial deal flow across enterprise SaaS agreements and DPAs; negotiates IP, licensing, and data rights provisions across SaaS, procurement, and partner deals.",
     },
     {
       requirement: "Build scalable legal infrastructure for a rapidly expanding customer portfolio",
-      proof: "Designed an Ironclad x Salesforce workflow that cut sales-request processing time by 30%; deploying AI tooling across Drata Legal.",
+      proof: "Deploying AI tooling and custom workflows across Drata Legal; designed an Ironclad x Salesforce integration that cut sales-request processing time by 30%.",
     },
     {
-      requirement: "Open source management, in-licensed components, product marketing support",
-      proof: "Embedded with Product and Engineering at Drata and Snappy; advises on third-party components and go-to-market materials.",
-    },
-    {
-      requirement: "Collaborate cross-functionally with Business, Ops, Finance, and Engineering",
-      proof: "Sole Legal rep on Drata's Privacy Committee (GDPR/CCPA compliance); daily partner to Sales, Security, and Product on commercial and data-protection matters.",
-    },
-    {
-      requirement: "Attorney in good standing, 3-7 years transactional experience",
-      proof: "Admitted in NY and NJ; 8+ years of transactional and in-house experience across SaaS, cybersecurity, and assessment platforms.",
+      requirement: "Cross-functional partner to Business, Product, Engineering, and Privacy",
+      proof: "Drata's Privacy lead on the Privacy Committee (GDPR/CCPA); daily collaborator with Sales, Security, Product, and Engineering on commercial, IP, and data-protection matters. Admitted in NY and NJ; 8+ years in-house at high-growth SaaS.",
     },
   ],
 
