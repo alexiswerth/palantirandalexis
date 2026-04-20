@@ -17,16 +17,25 @@ export const palantirCommercialCounsel: TargetRole = {
   sectionHeading: "Why I'm Built for This Role",
   matches: [
     {
-      requirement: "Lead drafting and negotiation of complex commercial and IP-heavy SaaS contracts",
-      proof: "Owns the majority of Drata's commercial deal flow across enterprise SaaS agreements and DPAs; negotiates IP, licensing, and data rights provisions across SaaS, procurement, and partner deals.",
+      iconName: "Shield",
+      label: "Commercial Contracting & IP",
+      requirement: "Lead drafting and negotiation of complex commercial and IP-heavy SaaS contracts.",
+      proof: "Owns the majority of Drata's commercial deal flow across enterprise SaaS agreements and DPAs. Negotiates IP, licensing, and data rights provisions across SaaS, procurement, and partner deals.",
+      tags: ["SaaS Agreements", "Licensing", "DPAs"],
     },
     {
-      requirement: "Build scalable legal infrastructure for a rapidly expanding customer portfolio",
-      proof: "Deploying AI tooling and custom workflows across Drata Legal; designed an Ironclad x Salesforce integration that cut sales-request processing time by 30%.",
+      iconName: "Zap",
+      label: "Scalable Legal Infrastructure",
+      requirement: "Build legal infrastructure for a rapidly expanding customer portfolio.",
+      proof: "Deploying AI tooling and custom workflows across Drata Legal. Designed an Ironclad x Salesforce integration that cut sales-request processing time by 30%.",
+      tags: ["AI Tooling", "Legal Ops", "Ironclad"],
     },
     {
-      requirement: "Cross-functional partner to Business, Product, Engineering, and Privacy",
-      proof: "Drata's Privacy lead on the Privacy Committee (GDPR/CCPA); daily collaborator with Sales, Security, Product, and Engineering on commercial, IP, and data-protection matters.",
+      iconName: "Globe",
+      label: "Cross-Functional Privacy Lead",
+      requirement: "Cross-functional partner to Business, Product, Engineering, and Privacy.",
+      proof: "Drata's Privacy lead on the Privacy Committee (GDPR/CCPA). Daily collaborator with Sales, Security, Product, and Engineering on commercial, IP, and data-protection matters.",
+      tags: ["Privacy", "GDPR / CCPA", "Cross-Functional"],
     },
   ],
 

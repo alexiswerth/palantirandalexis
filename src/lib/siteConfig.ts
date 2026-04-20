@@ -35,8 +35,11 @@ export interface EducationData {
 }
 
 export interface JobMatchPoint {
+  iconName: string;
+  label: string;
   requirement: string;
   proof: string;
+  tags: string[];
 }
 
 export interface TargetRole {
@@ -117,7 +120,6 @@ const siteConfig: SiteConfig = {
   // Derived: first nav link uses targetRole.navLabel
   navLinks: [
     { label: targetRole.navLabel, href: "#job-match" },
-    { label: "What I Bring", href: "#value-proposition" },
     { label: "Experience", href: "#experience" },
     { label: "Education", href: "#education" },
   ],
@@ -184,36 +186,7 @@ const siteConfig: SiteConfig = {
     "Law Clerk \u2013 NLRB, Region 2",
   ],
 
-  fitItems: [
-    {
-      iconName: "Shield",
-      label: "Commercial Contracting",
-      jobReq: "Lead drafting and negotiation of commercial customer contracts at a high-growth SaaS company",
-      myFit: "Go-to-market legal lead at Snappy and Drata: negotiated hundreds of SaaS agreements (MSAs, DPAs, NDAs, SOWs, SLAs). Closed deals driving 50%+ of Snappy's 2024 revenue and currently handle the majority of Drata's commercial deal flow.",
-      tags: ["SaaS Agreements", "MSA / DPA / NDA", "Revenue-Critical Deals"],
-    },
-    {
-      iconName: "Brain",
-      label: "IP & Licensing",
-      jobReq: "Own strategic licensing transactions, IP components of corporate transactions, and complex IP matters",
-      myFit: "Negotiated IP, licensing, and data rights provisions across SaaS and procurement deals at Snappy, Drata, Mimecast, and Prometric. Comfortable advising product and engineering on in-licensed components, IP safeguards, and product marketing matters.",
-      tags: ["Licensing", "IP Transactions", "Open Source"],
-    },
-    {
-      iconName: "Zap",
-      label: "Scalable Legal Infrastructure",
-      jobReq: "Build infrastructure to deliver legal support at scale to a rapidly expanding customer portfolio",
-      myFit: "Designed and shipped an Ironclad x Salesforce workflow that cut sales-request processing time by 30%. Drata's resident AI architect for Legal, deploying AI tooling and elevated negotiation thresholds to scale a two-person team across hundreds of deals.",
-      tags: ["Legal Ops", "Ironclad", "AI Workflows"],
-    },
-    {
-      iconName: "Globe",
-      label: "Cross-Functional Partnership",
-      jobReq: "Collaborate with Business, Operations, Finance, Engineering, Product, and Technical Implementation teams",
-      myFit: "Embedded with Sales, Procurement, Product, and Security across every in-house role. Sole Legal rep on Snappy's Procurement Committee ($14M+ annual spend). Partner with Product at Drata to embed legal review at the development level, not as an afterthought.",
-      tags: ["Cross-Functional", "Product Partnership", "Deal Execution"],
-    },
-  ],
+  fitItems: [],
 
   education: [
     { degree: "Juris Doctor", school: "City University of New York", location: "New York, NY" },

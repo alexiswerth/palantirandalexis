@@ -21,20 +21,25 @@ export const stripeCommercialCounsel: TargetRole = {
   sectionHeading: "Why I'm Built for This Role",
   matches: [
     {
-      requirement: "Lead enterprise commercial contract negotiations",
+      iconName: "Shield",
+      label: "Enterprise Commercial Contracts",
+      requirement: "Lead enterprise commercial contract negotiations.",
       proof: "Handles the majority of Drata's commercial deal flow; closed Snappy deals driving 50%+ of 2024 revenue.",
+      tags: ["SaaS Agreements", "Enterprise Deals"],
     },
     {
-      requirement: "Partner with Sales, Product, and Finance on complex deals",
+      iconName: "Globe",
+      label: "Cross-Functional Partnership",
+      requirement: "Partner with Sales, Product, and Finance on complex deals.",
       proof: "Sole Legal rep on Snappy's Procurement Committee ($14M+ annual spend); daily partner to Sales, Security, and Product at Drata.",
+      tags: ["Cross-Functional", "Procurement"],
     },
     {
-      requirement: "Build scalable contracting infrastructure",
+      iconName: "Zap",
+      label: "Scalable Contracting Infrastructure",
+      requirement: "Build scalable contracting infrastructure.",
       proof: "Designed an Ironclad x Salesforce workflow that cut sales-request processing time by 30%; deploying AI tooling across Drata Legal.",
-    },
-    {
-      requirement: "Attorney in good standing, 5+ years transactional experience",
-      proof: "Admitted in NY and NJ; 8+ years of transactional and in-house experience across SaaS and cybersecurity.",
+      tags: ["AI Tooling", "Legal Ops", "Ironclad"],
     },
   ],
 

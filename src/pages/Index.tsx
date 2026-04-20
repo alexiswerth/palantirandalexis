@@ -10,7 +10,7 @@ import siteConfig from "@/lib/siteConfig";
 const NavBar = lazy(() => import("@/components/NavBar"));
 const HeroSection = lazy(() => import("@/components/HeroSection"));
 const JobMatchSection = lazy(() => import("@/components/JobMatchSection"));
-const ValuePropositionSection = lazy(() => import("@/components/ValuePropositionSection"));
+
 const ExperienceSection = lazy(() => import("@/components/ExperienceSection"));
 const EducationSection = lazy(() => import("@/components/EducationSection"));
 const ParallaxElements = lazy(() => import("@/components/ParallaxElements"));
@@ -95,14 +95,6 @@ const Index = () => {
               <ErrorBoundary section="job-match" inline>
                 <Suspense fallback={<SectionFallback />}>
                   <JobMatchSection />
-                </Suspense>
-              </ErrorBoundary>
-            </LazyWhenVisible>
-
-            <LazyWhenVisible fallback={<SectionFallback />} rootMargin="300px">
-              <ErrorBoundary section="value-proposition" inline>
-                <Suspense fallback={<SectionFallback />}>
-                  <ValuePropositionSection />
                 </Suspense>
               </ErrorBoundary>
             </LazyWhenVisible>
