@@ -26,7 +26,7 @@ export const palantirCommercialCounsel: TargetRole = {
     },
     {
       requirement: "Cross-functional partner to Business, Product, Engineering, and Privacy",
-      proof: "Drata's Privacy lead on the Privacy Committee (GDPR/CCPA); daily collaborator with Sales, Security, Product, and Engineering on commercial, IP, and data-protection matters. Admitted in NY and NJ; 8+ years in-house at high-growth SaaS.",
+      proof: "Drata's Privacy lead on the Privacy Committee (GDPR/CCPA); daily collaborator with Sales, Security, Product, and Engineering on commercial, IP, and data-protection matters.",
     },
   ],
 
