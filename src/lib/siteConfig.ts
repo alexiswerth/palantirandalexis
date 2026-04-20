@@ -105,7 +105,7 @@ const siteConfig: SiteConfig = {
   ctaLabel: targetRole.ctaLabel,
 
   linkedin: "https://www.linkedin.com/in/alexis-werth-80496b30/",
-  github: "https://github.com/alexiswerth",
+  github: "https://github.com/alexiswerth/palantirandalexis",
   email: "awerth13@gmail.com",
   phone: "5163198772",
   phoneDisplay: "516.319.8772",
