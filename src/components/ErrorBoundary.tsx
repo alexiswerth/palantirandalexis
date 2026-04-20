@@ -29,7 +29,13 @@ class ErrorBoundary extends Component<Props, State> {
     const section = this.props.section || "unknown";
     logError(`[${section}] ${error.message}`, info.componentStack);
 
-    if (typeof window !== "undefined" && (window as any).__perf_metrics) {
+    // Only push detailed stack info to the global metrics store in development.
+    // In production, component stacks should not be readable by third-party scripts.
+    if (
+      import.meta.env.DEV &&
+      typeof window !== "undefined" &&
+      (window as any).__perf_metrics
+    ) {
       (window as any).__perf_metrics.errors.push({
         message: error.message,
         stack: info.componentStack,
