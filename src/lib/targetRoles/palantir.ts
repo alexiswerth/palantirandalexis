@@ -18,7 +18,7 @@ export const palantirCommercialCounsel: TargetRole = {
   matches: [
     {
       requirement: "Lead drafting and negotiation of commercial customer contracts",
-      proof: "Currently handles the majority of Drata's commercial deal flow; closed Snappy deals driving 50%+ of 2024 revenue.",
+      proof: "Owns majority of Drata's commercial deal flow across enterprise SaaS agreements, DPAs, and BAAs; daily partner to Privacy on data-processing matters.",
     },
     {
       requirement: "IP subject matter expert: strategic licensing and complex IP transactions",
@@ -34,7 +34,7 @@ export const palantirCommercialCounsel: TargetRole = {
     },
     {
       requirement: "Collaborate cross-functionally with Business, Ops, Finance, and Engineering",
-      proof: "Sole Legal rep on Snappy's Procurement Committee ($14M+ annual spend); daily partner to Sales, Security, and Product.",
+      proof: "Sole Legal rep on Drata's Privacy Committee (GDPR/CCPA compliance); daily partner to Sales, Security, and Product on commercial and data-protection matters.",
     },
     {
       requirement: "Attorney in good standing, 3-7 years transactional experience",
