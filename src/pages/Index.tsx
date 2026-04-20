@@ -130,7 +130,7 @@ const Index = () => {
                 <div>
                   <span className="text-2xl font-heading font-bold text-primary">AW</span>
                   <p className="mt-3 text-sm text-muted-foreground font-body leading-relaxed max-w-xs">
-                    In-house counsel at the intersection of legal, product, and innovation.
+                    Commercial Counsel | SaaS, IP, and complex transactions for high-growth tech.
                   </p>
                 </div>
 
