@@ -8,7 +8,7 @@ export const palantirCommercialCounsel: TargetRole = {
 
   heroSuffix: "Esq. | Your Next Commercial / IP Counsel, Palantir",
   tagline: "Built to own Palantir's commercial and IP deal flow from day one.",
-  bio: "In-house commercial counsel with eight plus years closing complex SaaS, licensing, and IP-heavy transactions for high-growth software companies. I draft and negotiate the agreements that move revenue, advise product and engineering on the IP that powers the platform, and build the workflows that let legal scale alongside the business. Ready to step into Palantir's commercial contracting and IP work without a ramp.",
+  bio: "In-house commercial counsel with eight plus years closing complex SaaS, licensing, and IP-heavy transactions for high-growth software companies. I draft and negotiate the agreements that move revenue, advise product and engineering on the IP that powers the platform, and build the workflows that let legal scale alongside the business.",
 
   ctaLabel: "See Why I Fit Palantir",
   navLabel: "Why Palantir",
