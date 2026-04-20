@@ -35,8 +35,11 @@ export interface EducationData {
 }
 
 export interface JobMatchPoint {
+  iconName: string;
+  label: string;
   requirement: string;
   proof: string;
+  tags: string[];
 }
 
 export interface TargetRole {
@@ -117,7 +120,6 @@ const siteConfig: SiteConfig = {
   // Derived: first nav link uses targetRole.navLabel
   navLinks: [
     { label: targetRole.navLabel, href: "#job-match" },
-    { label: "What I Bring", href: "#value-proposition" },
     { label: "Experience", href: "#experience" },
     { label: "Education", href: "#education" },
   ],
